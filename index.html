@@ -542,6 +542,7 @@
                     background:linear-gradient(to bottom, rgb(182, 181, 181), white white, rgb(182, 181, 181));
                     border: 1px solid rgb(211, 209, 209);
                     border-radius: 5px;
+                    /* text-wrap: nowrap; */
     }
     .collapsible:hover{
         cursor: grab;
@@ -985,6 +986,10 @@
                     }
                 }
     @media all and (max-width:959px){
+        #home-welcome{
+            background-repeat: repeat-y;
+            background-attachment: fixed;
+        }
         .welcome-message{
             width: 190px;
         }

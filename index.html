@@ -1,0 +1,1618 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html,body {
+          position: relative;
+          height: 100%;
+        }
+            *{
+                margin: 0;
+                box-sizing: border-box;
+            }
+            /* new header section part */
+            .header-box{
+                background-image: url(./images/bcg/naturechurch.jpeg);
+                background-position: center;
+                background-repeat: no-repeat;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                gap: 20px;
+                padding: 0 12vw;
+                height: 80vh;
+                position: relative;
+                /* animation: changeBcg 10s infinite step-end; */
+                /* animation-name: changeBcg;
+                animation-duration: 4s; */
+            }
+            .h-top{
+                height: fit-content;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                background-color: rgba(128, 128, 128, 0.446);
+            }
+            
+            .quick-contact{
+                flex: 1 100%;
+                /* border: 1px solid salmon; */
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 10px;
+            }
+            .quick-contact > *{
+                margin: 5px;
+            }
+            .quick-contact > p{
+                color: white;
+            }
+            .quick-social{
+                padding:0 10px;
+                width: fit-content;
+                /* border: 1px solid blue; */
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                justify-content: flex-end;
+            }
+            .quick-social > a{
+                color: white;
+            }
+            .nav-container{
+                padding: 0;
+                min-height: 8vh;
+                display: flex;
+                flex-direction: row;
+            }
+            .nav {
+                width: calc(100% - 120px);
+             display: flex;
+             flex-direction: row;
+             flex: 1 50%;
+             list-style: none;
+             margin: 0;
+             padding: 0;
+             background-image: linear-gradient(130deg, rgb(80, 150, 80) 0%,rgb(80, 150, 80) 60%, rgb(199, 199, 58) 60%, rgb(199, 199, 58) 100%);
+             align-items: center;
+                border-top-left-radius: 4vh;
+                border-bottom-left-radius: 4vh;
+                min-height: 8vh;
+            height: fit-content;
+           }
+           .nav-header{
+                width: auto;
+                /* padding: 0 20px; */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 4vh;
+                font-weight: bold;
+                flex: 1;
+               
+                /* border: 1px solid black; */
+                /* background-color: white; */
+         }
+         .nav-item {
+             position: relative;
+             padding: 5px 20px;
+           }
+           li:last-child {
+               margin-left: auto;
+           }
+           #home-cross{
+               font-size: 2em;
+               color: indigo;
+           }
+           .nav-item a {
+             text-decoration: none;
+             color: black;
+           }
+         
+           .nav-item:hover a {
+             text-decoration: underline;
+             text-underline-offset: 5px;
+           }
+         
+           .nav-item:hover .sub-menu {
+             display: block;
+             background-image: linear-gradient(130deg, rgb(80, 150, 80) 0%,rgb(80, 150, 80) 60%, rgb(199, 199, 58) 60%, rgb(199, 199, 58) 100%);
+           }
+         
+           .sub-menu {
+             display: none;
+             position: absolute;
+             top: 100%;
+             left: 0;
+             list-style: none;
+             margin: 0;
+             padding: 0;
+             background-color: white;
+             border: 1px solid gray;
+           }
+         
+           .sub-menu-item {
+             padding: 10px 20px;
+           }
+         
+           .sub-menu-item a {
+             text-decoration: none;
+             color: black;
+           }
+         
+           .sub-menu-item:hover a {
+             text-decoration: underline;
+             text-underline-offset: 5px;
+           }
+         
+           .sub-menu-item:hover .sub-sub-menu {
+             display: block;
+             background-image: linear-gradient(130deg, rgb(80, 150, 80) 0%,rgb(80, 150, 80) 60%, rgb(199, 199, 58) 60%, rgb(199, 199, 58) 100%);
+           }
+         
+           .sub-sub-menu {
+             display: none;
+             position: absolute;
+             top: 0;
+             left: 100%;
+             list-style: none;
+             margin: 0;
+             padding: 0;
+             background-color: white;
+             border: 1px solid gray;
+           }
+         
+           .sub-sub-menu-item {
+             padding: 10px 20px;
+           }
+         
+           .sub-sub-menu-item a {
+             text-decoration: none;
+             color: black;
+           }
+         
+           .sub-sub-menu-item:hover a {
+             text-decoration: underline;
+             text-underline-offset: 5px;
+           }
+         
+           /* Custom colors for each nav item */
+           .nav-item:nth-child(1):hover a {
+             text-decoration-color: red;
+           }
+         
+           .nav-item:nth-child(2):hover a {
+             text-decoration-color: green;
+           }
+         
+           .nav-item:nth-child(3):hover a {
+             text-decoration-color: blue;
+           }
+         
+           .nav-item:nth-child(4):hover a {
+             text-decoration-color: purple;
+           }
+         
+           .nav-item:nth-child(5):hover a {
+             text-decoration-color: orange;
+           }
+    
+            .site-title{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 4vh;
+                font-weight: bold;
+                border-top: 1px solid rgba(228, 215, 215, 0.623);
+                border-right: 1px solid rgba(153, 205, 50, 0.623);
+                background-color: #bababa56;
+    
+            }
+            .site-title *{
+                margin: 0;
+            }
+            #estifo{
+                color: indigo;
+            }
+            .skew-section{
+                width: 120px;
+                display: flex;
+                flex-direction: row;
+                position: relative;
+                height: inherit;
+            }
+            .skew-left{
+                height: 100%;
+                width: 20px;
+                transform: skewY(-30deg);
+                position: relative;
+                bottom: calc(10px * 0.57735026918962);
+                background-color: whitesmoke;
+            }
+            .skew-right{
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100px;
+                position: relative;
+                bottom: calc(20px * 0.57735026918962);
+                background-color: whitesmoke;        }
+    
+        
+    
+            /* drop down menu */
+            .drop-menu{
+                display: none;
+                width: fit-content;
+                list-style: none;
+                border: 1px solid rgb(185, 183, 183);
+                /* display: flex; */
+                justify-content: center;
+                flex-direction: column;
+                padding: 0 0;
+                background-color: rgb(126, 177, 126);
+                position: fixed;
+                right: 15vw;
+                margin-top: 0;
+            }
+            .drop-menu > li{
+                text-align: left;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px 20px;
+               
+            }
+            .drop-menu > li:hover{
+                background-color: rgb(64, 132, 157);
+            }
+            .drop-menu > li > a{
+                text-decoration: none;
+                color: rgba(0, 0, 0, 0.646);
+    
+            }
+            .drop-menu > li > a:hover{
+                color: white;
+            }
+            .h-bottom-text-1{
+                flex: 1 100%;
+                display: none;
+                flex-flow: column nowrap;
+                color: rgb(240, 207, 167);
+                /* position: absolute; */
+                font-size: calc(1em + 2vw);
+                font-weight: bold;
+                justify-content: space-around;
+                align-items: center;
+                gap: 5vw;
+                animation: toggleDisplay 10s infinite linear;
+            }
+            .h-bottom-text-1 > p{
+               padding: 3vw 0;
+            }
+            .h-bottom-text-2{
+                flex: 1 100%;
+                display: flex;
+                flex-flow: row nowrap;
+                flex: 1 100%;
+                /* animation: toggleBack 10s infinite linear; */
+            }
+            .filler2{
+                flex: 1 100%;
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: end;
+                justify-content: center;
+            }
+            .filler2 > button {
+                background-color: rgba(76, 0, 130, 0.733);
+                color: white;
+                padding: 5px 10px;
+                margin: 10px;
+                border: none;
+                border-radius: 5px;
+            }
+            .come-to-christianity{
+    
+                width: 50%;
+                color: rgb(240, 207, 167);
+            }
+            .come-to-christianity > h1{
+                font-size: calc(1em + 1vw);
+            }
+        /* drop down menu end */
+    /* latest news start */
+    .swiper-outer{
+            padding: 0 12vw;
+            background-image: url(./images/bcg/greycloud.webp);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        .swiper {
+            padding: 10px 0;        
+            display: flex;
+            flex-flow: column nowrap;
+            overflow: hidden;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 30px;
+    }
+    .swiper [class^="swiper-button-"]::after{
+        font-size: 30px;
+    }
+    .swiper-wrapper{
+        display: flex;
+        flex-flow: row nowrap  ;
+    }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .swiper-nav{
+            color: green;
+            font-size: 32px;
+        }
+        .swiper-nav:hover{
+            background-color: rgba(128, 128, 128, 0.534);
+        }
+        .latest-news-header{
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .latest-news-header > p{
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .nav-btn{
+            width: 100px;
+            height: fit-content;
+           position: absolute;
+            right: -5px;
+           display: flex;
+           flex-flow: row nowrap;
+           column-gap: 30px;
+            justify-content: center;
+        }
+        .news-obj{
+                    height: fit-content;
+                    flex-shrink: 0;
+                    position: relative;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    /* justify-content: space-between; */
+                    align-items: center;
+                    gap: 10px;
+                }
+                .news-obj > p{
+                    text-align: center;
+                }
+                .news-pic{
+                    height: auto;
+                    overflow: hidden;
+                    border: 7px solid whitesmoke;
+                   
+                }
+                .news-pic > img:hover{
+                    transform: scale(1.2);
+                    opacity: 0.7;
+                }
+                .res-image{
+                    display: block;
+                    width: 100%;
+                    transition: 0.5s;
+                }
+    
+        /* arrow shape for date info */
+        .arrow-container{
+            position: absolute;
+            top: 7px;
+            left: 7px;
+            width: 105px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            flex-flow: row nowrap;
+            column-gap: 0;
+        }
+        .arrow-base{
+            width: 100px;
+            height: 20px;
+            background-color: rgba(218, 205, 193, 0.774);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0.8;
+        }
+        .arrow-base > p{
+            font-weight: 100;
+            font-size: 12px;
+        }
+        .right-arrow{
+            height: 0;
+            width: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid rgb(218, 205, 193, 0.774);
+            opacity: 0.8;
+        }
+        /* arrow shape for date info */
+    
+        /* Read more button */
+            .more-button-container{
+                background: linear-gradient(rgba(255, 255, 0, 0.473), rgba(255, 255, 0, 0.473));
+                background-size: 0% 100%;
+                width: 130px;
+                height: 30px;
+                display: grid;
+                grid-template-columns: 30px 100px;
+                grid-template-rows: 30px;
+                margin: auto;
+            }
+            .more-button-container:hover{
+                cursor: grab;
+                transform: scale(1.1);
+            }
+            .more-button-container:active{
+                transform: scale(1);
+            }
+            .dot-container{
+                background-color: rgb(60, 182, 60);
+                border-right: 1px solid whitesmoke;
+                display: grid;
+                align-items: center;
+                justify-content: center;  
+                padding: 10px;
+                grid-template-columns: 3px 3px;
+                grid-template-rows: 3px;
+                gap: 4px;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+            .dot-container > div{
+                background-color: #252525;
+                width: 3px;
+                height: 3px;
+            }
+            .read-more-text{
+                background-color: rgb(60, 182, 60);
+                display: flex;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+            .read-more-text > p{
+                margin: auto;
+                font-size: 14px;
+                font-weight: bold;
+            }
+        /* Read more button */
+            /* start of home welcome section */
+            #home-welcome{
+                    width: 100vw;
+                    padding: 0 12vw;
+                    /* border: 1px solid black; */
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    background: url(./images/bcg/pexels-ivan-pozniak-5667508.jpg) no-repeat center 100%;
+                } 
+                .welcome-main{
+                    padding: 25px 0;
+                    box-sizing: border-box;
+                    width: 100%;
+                    /* border: 1px solid blue; */
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+                .welcome-message{
+                    flex-shrink: 1;
+                    max-width: 310px;
+                    height: fit-content;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin: 20px 10px;
+                }
+                .welcome-message > h2{
+                    margin: 0;
+                }
+                .hr-line{
+                    width: 100%;
+                    background-color: gray;
+                    height: 1px;
+                    margin-top: 20px;
+                }
+                .collapsible{
+                    display: block;
+                    width: 100%;
+                    height: 8vh;
+                    background:linear-gradient(to bottom, rgb(182, 181, 181), white white, rgb(182, 181, 181));
+                    border: 1px solid rgb(211, 209, 209);
+                    border-radius: 5px;
+    }
+    .collapsible:hover{
+        cursor: grab;
+    }
+    .sign-container{
+        width: 30%;
+        height: 100%;
+        border-right: 1px solid rgb(183, 181, 181);
+    }
+    .collapse-title {
+        width: 70%;
+        height: 100%;
+        /* border: 1px solid green; */
+    }
+    .collapse-title > p{
+        font-weight: bold;
+    }
+    .collapsible-text{
+        flex: 0;
+        text-align: center;
+        width: 100%;
+        height: fit-content;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        display: none;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .collapsible-text > p{
+        font-size: x-small;
+        font-weight: 100;
+        width: 90%;
+        color: black;
+    }
+                /* end of home welcome section */
+    /* page middle text headline start */
+    .brief-txt-box{
+        padding: 2vh 0;
+        /* border: 1px solid red; */
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .brief-txt-box > p{
+        font-weight: lighter;
+        color: gray;
+    }
+    .brief-txt-box > h1{
+        color: indigo;
+        margin: 10px 0;
+    }
+    #full-page-line{
+        width: 70vw;
+    }
+    /* page middle text headline end */
+    /* Christian stories with pictures  start*/
+    .christian-stories-box{
+        width: 100%;
+        padding-top: 2vh;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+    .pic-and-story{
+        display: flex;
+        flex-flow: row nowrap;
+        max-width: 380px;
+        flex-shrink: 1;
+        padding: 0 5px;
+    }
+    .pic-and-story:hover{
+        cursor: grab;
+    }
+    .story-item{
+        /* height: fit-content; */
+        word-wrap: normal;
+        flex: 1 100%;
+    }
+    
+    .story-line{
+        background-color: rgb(242, 244, 246);
+        padding: 10px;
+        display: flex;
+        flex-flow: column nowrap;
+        /* align-items: center; */
+        justify-content: center;
+        height: 100%;
+        /* border: 1px solid black; */
+        gap: 20px;
+        
+    }
+    .story-line > *{
+        margin: 0;
+    }
+    .one-to-one{
+        /* width: 100%;
+        aspect-ratio: 1 / 1; */
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    /* Christian stories with pictures end*/
+    /* bible quote */
+    .bible-quote{
+        /* border: 1px solid black; */
+        width: 100%;
+        padding: 0 0 5vh 0;
+        display: flex;
+        justify-content: center;
+        color: rgb(78, 77, 77);
+    }
+    .bible-verse{
+        /* border: 1px solid red; */
+        /* width: 550px; */
+        flex-shrink: 0;
+        text-align: center;
+        word-wrap: normal;
+    }
+    #quoted-verse{
+        margin-top: 20px;
+        font-weight: bold;
+        /* color: rgb(78, 77, 77); */
+        text-decoration: underline;
+        text-underline-offset: 10px;
+        line-height: 40px;
+    }
+    #quoted-section{
+        font-weight: lighter;
+        /* color: gray; */
+    }
+    #quoted-section > span{
+        /* color: rgba(128, 128, 128, 0.786); */
+        font-size: 14px;
+    }
+    .bible-verse > p > span{
+        font-size: 40px;
+        font-weight: bold;
+    }
+    /* Bible picture start */
+    /* Reminder section start */
+    .reminder{
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: row nowrap;
+        width: 100vw;
+        color: indigo;
+        padding: 2vh 0;
+        background-color: white;
+    }
+    .cross{
+        font-size: 56px;
+        flex-shrink: 0;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+    }
+    .reminder-text{
+        flex-shrink: 0;
+        font-size: 30px;
+        font-weight: bold;
+        width: 600px;
+        /* border: 1px solid black; */
+        text-align: center;
+    }
+    .join-button{
+        flex-shrink: 0;
+        width: 150px;
+        font-size: 20px;
+        background-color: indigo;
+        color: white;
+        border-radius: 5px;
+        font-weight: lighter;
+    }
+    /* Reminder section end */
+    .bible-fig{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    /* Bible picture end */
+    /* bible quote */
+    
+    /*  footer section starts*/
+    #footer{
+                width: 100vw;
+                padding: 3vh 0;
+                background: rgb(48, 36, 36);
+                display: flex;
+                flex-direction: column;
+            }
+            .upper-footer{
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                padding-bottom: 3vh;
+            }
+            .upper-footer-section{
+                /* border: 1px solid yellow; */
+                flex-shrink: 0;
+                width: 350px;
+                padding:0 20px;
+                color: white;
+            }
+            .section-body{
+                font-size: 10px;
+                font-weight: 100;
+            }
+            .upper-footer-section > ul{
+                padding-left: 8px;
+                color: white;
+                font-size: 12px;
+                font-weight: 100;
+                line-height: 20px;
+                list-style: none;
+    
+            }
+            .upper-footer-section > ul > li{
+                color: violet;
+                font-size: 10px;
+            }
+            .upper-footer-section > ul > li::before{
+               /* Unicode for a bullet */
+               content: "\2022";
+                 
+                 /* Styles for Indentation*/
+                 color: white;
+                  
+            }
+            .lower-footer{
+                padding: 0 5vw;
+              border-top: 1px solid gray;
+              display: flex;
+              flex-flow: row nowrap;
+              align-items: center;
+              justify-content: space-between;
+            }
+            .copy-right{
+                font-size: 14px;
+                flex-shrink: 0;
+                width: 600px;
+                height: fit-content;
+                text-align: left;
+                color: white;
+            }
+            .author{
+                color: rgb(20, 175, 227);
+                letter-spacing: 5px;
+            }
+            .footer-icons{
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-evenly;
+                width: 300px;
+                flex-shrink: 0;
+            }
+            .footer-icons > i{
+                margin-left: 1vw;
+            }
+            #to-top{
+                font-size: 2em;
+            }
+    
+            /*  footer section end*/
+    
+            /* start of utility classes */
+            .flex-row-center{
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                justify-content: center;
+            }
+            .flex-row-even-wrap{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+            .rounded-box{
+                width: 7px;
+                height: 6px;
+                background-color: rgb(90, 88, 88);
+                border-radius: 1px;
+                margin: 1px;
+            }
+            .doticons{
+                height: 100%;
+                width: 25px;
+                background-color: rgba(215, 211, 211, 0.701);
+                /* border-right: 1px solid rgb(169, 16, 16); */
+            }
+    
+            .flex-col-between{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .flex-row-between{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .flex-row-center{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .flex-row-cen{
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+    .flex-row{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .flex-col-even{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .flex-col-around{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .flex-col-bet{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .bcg-center-cover{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .div-center{
+        margin: 0 auto;
+    }
+    .margin1{
+        margin: 2.2vh 0;
+    }
+            /* end of utility classes */
+           /* latest news end */
+        @media all and (max-width:1092px){
+                .skew-section{
+                    display: none;
+                }
+        }
+        @media (max-width: 833px) {
+             .nav {
+               flex-direction: column;
+               align-items: flex-start;
+             }
+             .nav-item {
+               display: none;
+               position: relative;
+             }
+         
+             .nav-item:first-child {
+               display: block;
+               width: 100%;
+               text-align: center;
+             }
+         
+             .nav-item:first-child a {
+               display: none;
+             }
+         
+             .nav-item:first-child::before {
+               content: "\2630"; /* Menu icon */
+               font-size: 30px;
+             }
+         
+             .nav-item:first-child.active::before {
+               content: "\2715"; /* Close icon */
+             }
+         
+             .nav-item:first-child.active ~ .nav-item {
+               display: block;
+             }
+             .image-box {
+               width: 100%;
+               height: 25%;
+             }
+             .sub-menu{
+                position: absolute;
+                left: 100%;
+                top: 0;
+             }
+           }
+        @media all and (max-width: 776px){
+            .h-top{
+                padding: 5px 0;
+                flex-direction: column;
+                background-color: rgba(245, 245, 245, 0.685);
+            }
+            .quick-contact, .quick-social{
+                flex: 1 100%;
+                justify-content: space-evenly;
+                gap: 25px;
+            }
+            .header-box{
+                gap: 0px;
+            }
+            .quick-contact > p, .quick-social > p{
+                color: rgb(90, 89, 89);
+            }
+        }
+        @media all and (max-width:1239px){
+                    .welcome-message{
+                        width: 240px;
+                    }
+                    .pic-and-story{
+                        width: 300px;
+                    }
+                    .one-to-one{
+                        width: 100%;
+                        height: 75%;
+                        /* aspect-ratio: 3 / 2; */
+                    }
+                    .bible-verse{
+                        width: 400px;
+                    }
+                    .reminder-text{
+                        width: 400px;
+                    }
+                    .upper-footer-section{
+                        width: 300px;
+                    }
+                }
+    @media all and (max-width:959px){
+        .welcome-message{
+            width: 190px;
+        }
+        .pic-and-story{
+            width: 220px;
+        }
+        .one-to-one{
+            width: 100%;
+            height: 45%;
+            /* aspect-ratio: 3 / 2; */
+        }
+        .bible-verse{
+                        width: 300px;
+                    }
+        .reminder-text{
+            width: 350px;
+        }
+        .upper-footer-section{
+                        width: 250px;
+                    }
+        .lower-footer{
+            padding: 0 4.5vw;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        .footer-icons{
+            order: 5;
+            align-self: flex-end;
+            position: absolute;
+            right: 4.5vw;
+        }
+    }
+    @media all and (max-width:767px){
+        .welcome-main{
+            flex-direction: column;
+            justify-content: stretch;
+            align-items: center;
+            padding: 0 3vw;
+        }
+        .welcome-message{
+            /* flex: 1 100%; */
+            width: 100%;
+        }
+        .responsive-image{
+            aspect-ratio: 1 / 1;
+            border-radius: 10px;
+        }
+        .christian-stories-box{
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            justify-content: space-between ;
+        }
+        .pic-and-story{
+           width: 74vw;
+           align-items: center;
+           justify-content: stretch;
+        }
+        .story-item{
+            aspect-ratio: 1 / 1;
+        }
+        .one-to-one{
+           width: 100%;
+            height: 100%;
+           object-fit: fill;
+        }
+        .bible-verse{
+           width: 90%;   }
+        .reminder{
+            flex-direction: column;
+        }
+        .reminder > *{
+            padding: 2vh;
+        }
+        .reminder-text{
+            width: 90%;
+        }
+        .upper-footer{
+            flex-flow: column nowrap;
+        }
+        .upper-footer-section{
+            width: 90%;
+            padding-bottom: 2vh;
+        }
+        .lower-footer{
+            flex-flow: column column-reverse;
+            justify-content: center;
+        }
+        .lower-footer > *{
+            text-align: center;
+            width: 90%;
+            margin: 5px;
+        }
+        .copy-right{
+            order: 2;
+        }
+        .footer-icons{
+            position: unset;
+            order: 3;
+            display: flex;
+            justify-content: center;
+        }
+        #to-top{
+            order: 1;
+        }
+    
+    }
+    /* media queries end */
+    /* animation keyframes start */
+    
+        @keyframes changeBcg{
+            from{
+                background-image: url(./images/bcg/naturechurch.jpeg);
+            }
+            to{
+                background-image: url(./images/bcg/Jesus-Prays.jpg);
+            }
+        }
+    /* animation keyframes end */
+        
+        </style>
+</head>
+<body>
+    <div class="header-box">
+        <div class="h-top">
+            <div class="quick-contact">
+                <p>ጥያቄ አለዎት? <i class="fa-solid fa-phone-volume"></i>: <span>ስ. ቁ. </span><i class="fa-regular fa-envelope"></i>: <span>church@church.com</span></p>
+            </div>
+            <div class="quick-social">
+                <a href=""><i class="fa-brands fa-skype"></i></a> <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="fa-brands fa-facebook"></i></a> <a href=""><i class="fa-brands fa-vimeo-v"></i></a> <a href=""><i class="fa-brands fa-twitter"></i></a> <a href=""><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    <div class="nav-container">
+        <div class="nav-header">
+            <div class="site-title">
+                <p>ቤተ</p>
+                <div class="mid-line"></div>
+                <p id="estifo">እስጢፋኖስ</p>
+            </div>
+        </div>
+        <ul class="nav">
+            <!-- <li class="nav-header"> 
+                <p>ቤተ</p>
+                <div class="li-mid-line"></div>
+                <p id="estifo">እስጢፋኖስ</p></li> -->
+            <li class="nav-item"><a href="#">መግቢያ</a></li>
+            <!-- <li><div class="li-mid-line"></div></li> -->
+            <li class="nav-item"><a href="#">ደብራችን</a></li>
+            <!-- <li><div class="li-mid-line"></div></li> -->
+            <li class="nav-item">
+              <a href="#">አገልግሎት</a>
+              <ul class="sub-menu">
+                <li class="sub-menu-item"><a href="#">ጥምቀት</a></li>
+                <li class="sub-menu-item"><a href="#">ጋብቻ</a></li>
+                <li class="sub-menu-item">
+                  <a href="#">ትምህርት</a>
+                  <ul class="sub-sub-menu">
+                    <li class="sub-sub-menu-item"><a href="#">መፅሐፍ ቅዱስ</a></li>
+                    <li class="sub-sub-menu-item"><a href="#">የግዕዝ</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <!-- <li><div class="li-mid-line"></div></li> -->
+            <li class="nav-item"><a href="#">አገልጋዮቻችን</a></li>
+            <!-- <li><div class="li-mid-line"></div></li> -->
+            <li class="nav-item">
+              <a href="#">ለመርዳት</a>
+              <ul class="sub-menu">
+                <li class="sub-menu-item"><a href="#">ያንድ ጊዜ</a></li>
+                <li class="sub-menu-item"><a href="#">በየወሩ</a></li>
+                <li class="sub-menu-item">
+                  <a href="#">ሌሎች</a>
+                  <ul class="sub-sub-menu">
+                    <li class="sub-sub-menu-item"><a href="#">በዓይነት</a></li>
+                    <li class="sub-sub-menu-item"><a href="#">ቅርስ</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+                <i class="fa-solid fa-cross" id="home-cross"></i>
+            </li>
+        </ul>
+          <div class="skew-section">
+            <div class="skew-left"></div>
+            <div class="skew-right">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+    </div>
+    <div class="h-bottom-text-1">
+        <p>እምነት ወደ ጥበብ ይመራችኋል።</p>
+    </div>
+    <div class="h-bottom-text-2">
+        <div class="filler2">
+            <div class="come-to-christianity">
+                <h1>እምነት ወደ ጥበብ ይመራችኋል!</h1>
+                <p>እምነት ወደ ጥበብ ይመራችኋል እምነት ወደ ጥበብ ይመራችኋል እምነት ወደ ጥበብ ይመራችኋል እምነት ወደ</p>
+            </div>
+            <button>ተጨማሪ</button>
+        </div>
+    </div>
+ </div>
+ <div class="swiper-outer">
+    <div class="swiper mySwiper">
+        <div class="latest-news-header">
+            <p>ወቅታዊ መረጃዎች</p>
+            <div class="nav-btn">
+                <div class="swiper-button-next swiper-nav"></div>
+                <div class="swiper-button-prev swiper-nav"></div>
+            </div>
+        </div>
+        <div class="swiper-wrapper">
+            <div class="news-obj swiper-slide">
+                <div class="news-pic">
+                    <img class="res-image" src="./images/bcg/pexels-pixabay-257030.jpg" alt="">
+                </div>
+                <p>የዜና አረዕስት መግለጫጫጫጫ</p>
+                <div class="more-button-container">
+                    <div class="dot-container">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="read-more-text">
+                        <p>ተጨማሪ</p>
+                    </div>
+                </div>
+                <div class="arrow-container">
+                    <div class="arrow-base">
+                        <p>መስ ፮ ፳፩፮</p>
+                    </div>
+                    <div class="right-arrow"></div>
+                </div>
+                
+            </div>
+            <div class="news-obj swiper-slide">
+                <div class="news-pic">
+                    <img class="res-image" src="./images/bcg/pexels-pixabay-257030.jpg" alt="">
+                </div>
+                <p>የዜና አረዕስት መግለጫጫጫጫ</p>
+                <div class="more-button-container">
+                    <div class="dot-container">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="read-more-text">
+                        <p>ተጨማሪ</p>
+                    </div>
+                </div>
+                <div class="arrow-container">
+                    <div class="arrow-base">
+                        <p>ጥቅ ፮ ፳፩፮</p>
+                    </div>
+                    <div class="right-arrow"></div>
+                </div>
+            </div>
+            <div class="news-obj swiper-slide">
+                <div class="news-pic">
+                    <img class="res-image" src="./images/bcg/pexels-pixabay-257030.jpg" alt="">
+                </div>
+                <p>የዜና አረዕስት መግለጫጫጫጫ ቢንጫጫ በሙቀጫ</p>
+                <div class="more-button-container">
+                    <div class="dot-container">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="read-more-text">
+                        <p>ተጨማሪ</p>
+                    </div>
+                </div>
+                <div class="arrow-container">
+                    <div class="arrow-base">
+                        <p>ሕድ ፮ ፳፩፮</p>
+                    </div>
+                    <div class="right-arrow"></div>
+                </div>
+            </div>
+            <div class="news-obj swiper-slide">
+                <div class="news-pic">
+                    <img class="res-image" src="./images/bcg/pexels-pixabay-257030.jpg" alt="">
+                </div>
+                <p>የዜና አረዕስት መግለጫጫጫጫ ቢንጫጫ በሙቀጫ</p>
+                <div class="more-button-container">
+                    <div class="dot-container">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="read-more-text">
+                        <p>ተጨማሪ</p>
+                    </div>
+                </div>
+                <div class="arrow-container">
+                    <div class="arrow-base">
+                        <p>ሕድ ፮ ፳፩፮</p>
+                    </div>
+                    <div class="right-arrow"></div>
+                </div>
+            </div>
+            <div class="news-obj swiper-slide">
+                <div class="news-pic">
+                    <img class="res-image" src="./images/bcg/pexels-pixabay-257030.jpg" alt="">
+                </div>
+                <p>የዜና አረዕስት መግለጫጫጫጫ ቢንጫጫ በሙቀጫ</p>
+                <div class="more-button-container">
+                    <div class="dot-container">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="read-more-text">
+                        <p>ተጨማሪ</p>
+                    </div>
+                </div>
+                <div class="arrow-container">
+                    <div class="arrow-base">
+                        <p>ሕድ ፮ ፳፩፮</p>
+                    </div>
+                    <div class="right-arrow"></div>
+                </div>
+            </div>
+            <div class="news-obj swiper-slide">
+                <div class="news-pic">
+                    <img class="res-image" src="./images/bcg/pexels-pixabay-257030.jpg" alt="">
+                </div>
+                <p>የዜና አረዕስት መግለጫጫጫጫ ቢንጫጫ በሙቀጫ</p>
+                <div class="more-button-container">
+                    <div class="dot-container">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="read-more-text">
+                        <p>ተጨማሪ</p>
+                    </div>
+                </div>
+                <div class="arrow-container">
+                    <div class="arrow-base">
+                        <p>ሕድ ፮ ፳፩፮</p>
+                    </div>
+                    <div class="right-arrow"></div>
+                </div>
+            </div>
+            <div class="news-obj swiper-slide">
+                <div class="news-pic">
+                    <img class="res-image" src="./images/bcg/pexels-pixabay-257030.jpg" alt="">
+                </div>
+                <p>የዜና አረዕስት መግለጫጫጫጫ ቢንጫጫ በሙቀጫ</p>
+                <div class="more-button-container">
+                    <div class="dot-container">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="read-more-text">
+                        <p>ተጨማሪ</p>
+                    </div>
+                </div>
+                <div class="arrow-container">
+                    <div class="arrow-base">
+                        <p>ሕድ ፮ ፳፩፮</p>
+                    </div>
+                    <div class="right-arrow"></div>
+                </div>
+            </div>
+            <div class="news-obj swiper-slide">
+                <div class="news-pic">
+                    <img class="res-image" src="./images/bcg/pexels-pixabay-257030.jpg" alt="">
+                </div>
+                <p>የዜና አረዕስት መግለጫጫጫጫ ቢንጫጫ በሙቀጫ</p>
+                <div class="more-button-container">
+                    <div class="dot-container">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="read-more-text">
+                        <p>ተጨማሪ</p>
+                    </div>
+                </div>
+                <div class="arrow-container">
+                    <div class="arrow-base">
+                        <p>ሕድ ፮ ፳፩፮</p>
+                    </div>
+                    <div class="right-arrow"></div>
+                </div>
+            </div>
+            <div class="news-obj swiper-slide">
+                <div class="news-pic">
+                    <img class="res-image" src="./images/bcg/pexels-pixabay-257030.jpg" alt="">
+                </div>
+                <p>የዜና አረዕስት መግለጫጫጫጫ ቢንጫጫ በሙቀጫ</p>
+                <div class="more-button-container">
+                    <div class="dot-container">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div class="read-more-text">
+                        <p>ተጨማሪ</p>
+                    </div>
+                </div>
+                <div class="arrow-container">
+                    <div class="arrow-base">
+                        <p>ሕድ ፮ ፳፩፮</p>
+                    </div>
+                    <div class="right-arrow"></div>
+                </div>
+            </div>
+          
+        </div>
+        <div class="swiper-pagination"></div>  
+     </div>
+  </div>
+<div id="home-welcome">
+    <div class="welcome-main">
+        <div class="welcome-message">
+            <h2>የአግዚአብሔር ሰላምታ</h2>
+            <p>ልህህል ስድ ስድልልህ ስዳስድል ስድሳድል አስዳስልጅል አስዳስል አስዳስድጅል ሕላስድ ። ስድልልህ አስድህ አኦእሩ አውፕር አልጅግ አልጃግ አልሃ አልጃ አልፍሃ። አልስድህዋአው? <p>ልህህል ስድ ስድልልህ ስዳስድል ስድሳድል አስዳስልጅል አስዳስል አስዳስድጅል ሕላስድ ። ስድልልህ አስድህ አኦእሩ አውፕር አልጅግ አልጃግ አልሃ አልጃ አልፍሃ። አልስድህዋአው?</p>
+        </div>
+        <div class="welcome-message">
+            <button class="collapsible flex-row">
+                <div class="sign-container flex-row-center">
+                    <i class="fa-solid fa-plus" style="color: #383838;"></i>
+                </div>
+                <div class="collapse-title flex-row-center">
+                    <p>የቤተ-ክርስትያኗ ተልዕኮ</p>
+                </div>
+            </button>
+            <div class="collapsible-text">
+                <p>ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ቭ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ</p>
+            </div>
+            <button class="collapsible flex-row">
+                <div class="sign-container flex-row-center">
+                    <i class="fa-solid fa-plus" style="color: #383838;"></i>
+                </div>
+                <div class="collapse-title flex-row-center">
+                    <p>ስለ ቤተ-ክርስቲያኗ</p>
+                </div>
+            </button>
+            <div class="collapsible-text">
+                <p>ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ቭ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ</p>
+            </div>
+            <button class="collapsible flex-row">
+                <div class="sign-container flex-row-center">
+                    <i class="fa-solid fa-plus" style="color: #383838;"></i>
+                </div>
+                <div class="collapse-title flex-row-center">
+                    <p>ሥራዎች</p>
+                </div>
+            </button>
+            <div class="collapsible-text">
+                <p>ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ቭ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ ተልዕኮ</p>
+            </div>
+        </div>
+        <div class="welcome-message">
+            <img class="responsive-image" src="../church/images/bible_figures/p1.jpeg" alt="">
+        </div>
+        <div class="welcome-message">
+            <h2>ስዳስ ኡፓቭ</h2>
+            <div class="hr-line"></div>
+            <p>ልሃስድ ፖእፕኦ ልቅም አስድ ፖጃስደ አአድስ አስድፍፍድቫል አጋፍ አፋ አአፍፕጅቀ አስድፍድፍ አድፍ አፍ ወወርፑኦአ አአ;ድጅፍ አፍ አፍድፋጅ አፍንላፍ አፍድስልጅ።</p>
+            <p>ልሃስድ ፖእፕኦ ልቅም አስድ ፖጃስደ አአድስ አስድፍፍድቫል አጋፍ አፋ አአፍፕጅቀ አስድፍድፍ አድፍ አፍ ወወርፑኦአ አአ;ድጅፍ አፍ አፍድፋጅ አፍንላፍ አፍድስልጅ?</p>
+        </div>
+    </div>
+    <div class="brief-txt-box">
+        <p>ለኛም ፀልዩልን</p>
+        <h1>ክርስቲያናዊ ታሪኮች</h1>
+        <div class="hr-line" id="full-page-line"></div>
+    </div>
+    <div class="christian-stories-box">
+        <div class="pic-and-story">
+            <div class="story-item picture">
+                <img class="one-to-one" src="../church/images/bible_figures/priest-ethiopian.jpg" alt="">
+            </div>
+            <div class="story-item story-line">
+                <p>የአባት ስም</p>
+                <div class="hr-line"></div>
+                <h3 style="font-weight: bold;">ታሪካዊ አውድ</h3>
+                <p><i class="fa-solid fa-chevron-right"></i></p>
+            </div>
+        </div>
+        <div class="pic-and-story">
+            <div class="story-item picture">
+                <img class="one-to-one" src="../church/images/bible_figures//priest-ethiopian.jpg" alt="">
+            </div>
+            <div class="story-item story-line">
+                <p>የአባት ስም</p>
+                <div class="hr-line"></div>
+                <h3 style="font-weight: bold;">ታሪካዊ አውድ</h3>
+                <p><i class="fa-solid fa-chevron-right"></i></p>
+            </div>
+        </div>
+        <div class="pic-and-story">
+            <div class="story-item picture">
+                <img class="one-to-one" src="../church/images/bible_figures/priest-ethiopian.jpg" alt="">
+            </div>
+            <div class="story-item story-line">
+                <p>የአባት ስም</p>
+                <div class="hr-line"></div>
+                <h3 style="font-weight: bold;">ታሪካዊ አውድ</h3>
+                <p><i class="fa-solid fa-chevron-right"></i></p>
+            </div>
+        </div>
+    </div>
+    <div class="bible-quote">
+        <div class="bible-verse">
+            <p id="quoted-verse"><span id="quote-mark"><i class="fa-solid fa-quote-right" style="color: #bababa;"></i></span> ማንም በልጁ ያመነ ሁሉ አይጠፋም ፣ የዘላለም ህይወትን ያገኛል እንጂ።</p>
+            <p id="quoted-section"> <span><i class="fa-solid fa-user"></i></span> ዮሃ 3:16</p>
+        </div>
+    </div>
+    <div class="bible-fig">
+            <img src="../church/images/bible_figures/wordings.png" alt="">
+    </div>
+</div>
+<div class="reminder">
+    <div class="cross"> 
+        <i class="fa-solid fa-cross"></i>
+    </div>
+    <p class="reminder-text">እየሱስ በእዉነት ላመኑት ሁሉ ይፀልያል!</p>
+    <button class="join-button">አባል ይሁኑ</button>
+</div>
+<div id="footer">
+    <div class="upper-footer">
+        <div class="upper-footer-section">
+            <p class="section-header">እዚህ ላይ ይፃፍ</p>
+            <p class="section-body"> እዚህ ላይ ይፃፍ እዚህ ላይ ይፃፍ ይፃፍ እዚህ ላይ ይፃፍ ይፃፍ እዚህ ላይ ይፃፍ ይፃፍ እዚህ ላይ ይፃፍ እዚህ ላይ ይፃፍ እዚህ ላይ ይፃፍ እዚህ ላይ ይፃፍ እዚህ ላይ ይፃፍ እዚህ ላይ ይፃፍ</p>
+        </div>
+        <div class="upper-footer-section">
+            <p class="section-header">እዚህ ላይ ይፃፍ</p>
+            <p class="section-body"> እዚህ ላይ ይፃፍ እዚህ ላይ ይፃፍ ይፃፍ እዚህ ላይ ይፃፍ ይፃፍ እዚህ ላይ ይፃፍ ይፃፍ እዚህ ላይ ይፃፍ እዚህ ላይ ይፃፍ እዚህ ላይ ይፃፍ እዚህ ላይ ይፃፍ እዚህ ላይ ይፃፍ እዚህ ላይ ይፃፍ</p>
+        </div>
+        <div class="upper-footer-section" id="right-most">
+            <p class="section-header">እዚህ ላይ ይፃፍ</p>
+                <ul>
+                    <li><span class="list-text"> ዝርዝሩን እዚህ ላይ ፃፍ እዚህ ላይ ፃፍ</span></li>
+                    <li><span class="list-text"> ዝርዝሩን እዚህ ላይ ፃፍ እዚህ ላይ ፃፍ</span></li>
+                    <li><span class="list-text"> ዝርዝሩን እዚህ ላይ ፃፍ እዚህ ላይ ፃፍ</span></li>
+                </ul>
+        </div>
+    </div>
+    <div class="lower-footer">
+        <p class="copy-right"><i class="fa-regular fa-copyright"></i> የደብር ዘውግ በ <span class="author">ኪሩቤል አ.</span> <span> | መብቱ በህግ የተጠበቀ ነው!</p>
+        <p class="footer-icons">
+            <i class="fa-brands fa-facebook" style="color: #6e6e6f;"></i><i class="fa-brands fa-skype" style="color: #6e6e6f;"></i>
+            <i class="fa-brands fa-twitter" style="color: #6e6e6f;"></i>
+            <i class="fa-brands fa-vimeo-v" style="color: #6e6e6f;"></i>
+            <i class="fa-brands fa-instagram" style="color: #6e6e6f;"></i>
+            
+        </p>
+        <p id="to-top"><i class="fa-solid fa-angle-up" style="color: #6e6e6f;"></i></p>
+    </div>
+</div>
+ <script>
+    var collapseBtn = document.getElementsByClassName("collapsible");
+        for (var i = 0; i < collapseBtn.length; i++) {
+
+                collapseBtn[i].addEventListener("click", function() {
+                // this.classList.toggle("active");
+                    
+                    var content = this.nextElementSibling;
+                    var sign = this.children[0];
+                    
+                    if (content.style.display === "flex") {
+                            content.style.display = "none";
+                            sign.innerHTML = `<i class="fa-solid fa-plus" style="color: #383838;"></i>`;
+                            
+                        } 
+                    else {
+                            content.style.display = "flex";
+                            content.classList.add("flex-row-cen");
+                            sign.innerHTML = `<i class="fa-solid fa-minus" style="color: #404244;"></i>`;
+                            content.style.background = "white";
+                        }
+                            }
+                            )};
+    
+ </script>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+ <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 4,
+      spaceBetween: 30,
+      loop: true,
+      pagination: {
+        // el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation:{
+        prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+      },
+      breakpoints:{
+        0:{
+            slidesPerView:1,
+        },
+        520:{
+            slidesPerView:2,
+        },
+        950:{
+            slidesPerView:3,
+        },
+        1200:{
+            slidesPerView: 4,
+        }
+      },
+    });
+ </script>
+ <script>
+    // Add event listener to toggle the menu icon and items
+    let menu = document.querySelector(".nav-item:first-child");
+    menu.addEventListener("click", function() {
+      menu.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>

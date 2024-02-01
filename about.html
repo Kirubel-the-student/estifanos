@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            /* navbar section css */
+        .nav-container{
+            padding: 0 12vw;
+            min-height: 8vh;
+            display: flex;
+            flex-direction: row;
+        }
+        .nav {
+            width: calc(100% - 120px);
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(130deg, rgba(80, 150, 80, 0.8) 0%,rgba(80, 150, 80, 0.8) 60%, rgba(199, 199, 58, 0.8) 60%, rgba(199, 199, 58, 0.8) 100%);
+            align-items: center;
+            border-top-left-radius: 4vh;
+            border-bottom-left-radius: 4vh;
+          }
+       .nav *{
+            transition: all 0.3s ease;
+       }
+     .nav-header{
+            width: auto;
+            /* padding: 0 20px; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4vh;
+            font-weight: bold;
+            flex-shrink: 1;
+          }
+       .nav-item {
+            position: relative;
+            padding: 5px 1vw;
+            /* display: flex;
+            flex: 1 row;
+            justify-content: space-evenly; */
+       }
+       li:last-child {
+           margin-left: auto;
+       }
+       #home-cross{
+           font-size: 2em;
+           color: indigo;
+       }
+       .nav-item a {
+          text-decoration: none;
+          color: black;
+       }
+     
+       .nav-item:hover a {
+         text-decoration: underline;
+         text-underline-offset: 5px;
+       }
+     
+       .nav-item:hover .sub-menu {
+         display: block;
+       }
+     
+       .sub-menu {
+         display: none;
+         position: absolute;
+         top: 100%;
+         left: 0;
+         list-style: none;
+         margin: 0;
+         z-index: 1;
+         padding: 0;
+         background-color: rgba(80, 150, 80, 0.8);
+         border: 1px solid gray;
+       }
+     
+       .sub-menu-item {
+         padding: 10px 10px;
+         width: fit-content;
+         position: relative;
+       }
+     
+       .sub-menu-item a {
+         text-decoration: none;
+         color: black;
+       }
+     
+       .sub-menu-item:hover a {
+         text-decoration: underline;
+         text-underline-offset: 5px;
+       }
+     
+       .sub-menu-item:hover .sub-sub-menu {
+         display: block;
+       }
+       .education-sub-menu:hover .service-arrow, .donation-sub-menu:hover  .donate-arrow {
+    transform: rotate(-90deg);
+    }
+       .sub-sub-menu {
+         display: none;
+         position: absolute;
+         top: 0;
+         left: 100%;
+         list-style: none;
+         margin: 0;
+         padding: 0;
+         background-color: rgba(80, 150, 80, 0.8);
+         border: 1px solid gray;
+       }
+       li:hover .service-arrow,
+    li:hover .donate-arrow{
+    transform: rotate(180deg);
+    }
+       .sub-sub-menu-item {
+         padding: 10px 15px;
+       }
+     
+       .sub-sub-menu-item a {
+         text-decoration: none;
+         color: black;
+       }
+     
+       .sub-sub-menu-item:hover a {
+         text-decoration: underline;
+         text-underline-offset: 5px;
+       }
+     
+       /* Custom colors for each nav item */
+       .nav-item:nth-child(1):hover a {
+         text-decoration-color: red;
+       }
+     
+       .nav-item:nth-child(2):hover a {
+         text-decoration-color: green;
+       }
+     
+       .nav-item:nth-child(3):hover a {
+         text-decoration-color: blue;
+       }
+     
+       .nav-item:nth-child(4):hover a {
+         text-decoration-color: purple;
+       }
+     
+       .nav-item:nth-child(5):hover a {
+         text-decoration-color: orange;
+       }
+       /* bottom nav bar */
+        .site-title{
+            /* width: 300px; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4vh;
+            font-weight: bold;
+            border-top: 1px solid rgba(0, 0, 0, 0.623);
+            border-right: 1px solid rgba(153, 205, 50, 0.623);
+        }
+        .site-title *{
+            margin: 0;
+        }
+        #estifo{
+            color: indigo;
+        }
+        .skew-section{
+            width: 120px;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            height: 8vh;
+            /* display: none; */
+        }
+        .skew-left{
+            height: 100%;
+            width: 20px;
+            transform: skewY(-30deg);
+            position: relative;
+            bottom: calc(10px * 0.57735026918962);
+            background-color: whitesmoke;
+        }
+        .skew-right{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            position: relative;
+            bottom: calc(20px * 0.57735026918962);
+            background-color: whitesmoke;        }
+
+        /* sparators */
+        .mid-line{
+            width: 1px;
+            height: 60%;
+            background-color: gray;
+            margin: 0 2px;
+        }
+       /*  end bottom nav bar*/
+       @media (max-width: 833px) {
+         .nav {
+           flex-direction: column;
+           align-items: flex-start;
+         }
+         .header-container {
+                           flex-direction: column;
+                           }
+         .nav-item {
+           display: none;
+         }
+     
+         .nav-item:first-child {
+           display: block;
+           width: 100%;
+           text-align: center;
+         }
+     
+         .nav-item:first-child a {
+           display: none;
+         }
+     
+         .nav-item:first-child::before {
+           content: "\2630"; /* Menu icon */
+           font-size: 30px;
+         }
+     
+         .nav-item:first-child.active::before {
+           content: "\2715"; /* Close icon */
+         }
+     
+         .nav-item:first-child.active ~ .nav-item {
+           display: block;
+         }
+         .image-box {
+           width: 100%;
+           height: 25%;
+         }
+         .sub-menu{
+          left: 100%;
+          top: 0;
+         }
+       }
+       /* start -- responsible design for the skew nav bar */
+       @media all and (max-width:1092px){
+            .skew-section{
+                display: none;
+            }
+    }
+    @media all and (max-width: 776px){
+        .h-top{
+            padding: 5px 0;
+            flex-direction: column;
+            background-color: rgba(245, 245, 245, 0.685);
+        }
+        .quick-contact, .quick-social{
+            flex: 1 100%;
+            justify-content: space-evenly;
+            gap: 25px;
+        }
+        .header-box{
+            gap: 0px;
+        }
+        .quick-contact > p, .quick-social > p{
+            color: rgb(90, 89, 89);
+        }
+    }
+            /* navbar section css */
+            .about-header-wrapper{
+                display: flex;
+                padding: 20px 12vw;
+                box-sizing: border-box;
+                border: 1px solid black;
+                gap: 15px;
+                flex-flow: row wrap;
+                justify-content: space-around;
+                /* background: url(./images/bcg/pexels-lachlan-ross-5967954.jpg) fixed  ; */
+                height: fit-content;
+                
+            }
+        .about-header-wrapper > *{
+            flex: 1 100%;
+        }
+        .birana-script{
+            height: 20vh;
+            background: no-repeat url(./images/bcg/old-script.jpg);
+            background-size: cover;
+        }
+        .about-h{
+            padding: 10px 5px;
+            flex: 1 0px;
+            /* border: 1px solid green; */
+            min-width: 350px;
+            background-color: rgba(220, 220, 220, 0.767);
+            border-bottom-left-radius: 4vh;
+            border-bottom-right-radius: 4vh;
+        }
+        .about-h > h1{
+            margin-top: 0;
+            width: fit-content;
+            padding: 5px 10px;
+            font-size: 32px;
+            font-weight: bolder;
+            word-spacing: 8px;
+            word-break: normal;
+            color: indigo;
+            background: rgba(172, 152, 115, 0.651);
+            border-radius: 6px;
+        }
+        .about-h > p{
+            margin-bottom: 10px;
+            width: 100%;
+            text-align: justify;
+        }
+        .more-text {
+      display: none;
+    }
+  
+    .read-more-btn {
+      background-color: rgba(220, 220, 220, 0.767);
+      color: rgb(142, 206, 82);
+      padding: 10px 20px;
+      border: 2px solid rgba(0, 0, 0, 0.356);
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px;
+      font-weight: bold;
+    }
+        .horizontal-divider{
+            width: 48%;
+            height: 90%;
+            border: 1px solid black;
+           }
+/* text and picture side by side */
+
+.header-container {
+            display: flex;
+            flex-direction: row; /* default value */
+            background-color: rgba(220, 220, 220, 0.767);
+            border-top-left-radius: 4vh ;
+            border-top-right-radius: 4vh ;
+        }
+        .header-container div {
+            min-width: 250px;
+            padding: 10px;
+        }
+        .left-section {
+            flex: 1 1 50%;
+       
+        }
+        .left-section h1{
+            margin-top: 0px;
+            padding-left: 5px;
+            font-weight: bolder;
+            word-spacing: 8px;
+            word-break: normal;
+            color: indigo;
+            background: rgba(172, 152, 115, 0.651);
+            border-radius: 6px;
+        }
+        .two-columns {
+            columns: 2;
+            list-style-type: "-- ";
+            margin-left: 20px;
+        }
+        .right-section {
+            flex: 1 50%;
+            background-color: rgba(220, 220, 220, 0.767);
+            border-top-right-radius: 4vh ;
+        
+        }
+        #main-img {
+            max-width: 100%;
+            /* min-width: 300px; */
+            height: auto;
+            border-top-right-radius: 2vh;
+        }
+/* text and picture side by side */
+        /* Heading and normal text side by side*/
+        .about-t{
+            padding: 10px 0;
+            flex: 1 0px;
+            /* border: 1px solid blue; */
+            color: rgb(54, 44, 39);
+            min-width: 300px;     
+        }
+        .about-t > p{
+            margin-top: 0;
+            
+        }
+        .t-head{
+            font-size: 34px;
+            width: 80%;
+            font-weight: bold;
+            
+        }
+        .t-head p{
+            width: 90%;
+            background-color: rgba(220, 220, 220, 0.479);
+        }
+        .t-body{
+            text-align: left;
+        }
+        
+        #t-text{
+            font-size: 1em;
+            padding-left: 3vw;
+            border-left: 2px solid rgb(54, 44, 39);
+            background-color: rgba(220, 220, 220, 0.479);
+        }
+        /* icons */
+        
+/* page divider */
+.cross-divider {
+      display: flex;
+      align-items: center;
+      /* margin: 20px 0; */
+    }
+  
+    .cross-divider::before,
+    .cross-divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, #ccc, transparent);
+    }
+  
+    .cross-divider::before {
+      margin-right: 10px;
+    }
+  
+    .cross-divider::after {
+      margin-left: 10px;
+    }
+  
+    .cross-divider span {
+      font-size: 50px;
+      color: #0ba320;
+      font-weight: bold;
+    }
+/* page divider */
+        /* four pictures section */
+        .about-pics{
+            padding: 40px 0;
+            display: flex;
+            flex-flow: row wrap;
+            gap: 20px;
+            border-radius: 4vh;
+            border: 1px solid green;
+            background: rgba(220, 220, 220, 0.479);
+        }
+        .about-pics > div{
+            min-width: 150px;
+            height: fit-content;
+            flex: 1;
+            border: 5px solid gray;
+            background-color: grey;
+            overflow: hidden;
+        }
+        .about-pics > div > img{
+            height: 110%;
+            transition: 1s;
+        }
+        .res-image{
+            width: 100%;
+            aspect-ratio: 1 1;
+        }
+        .about-pics > div > img:hover{
+            transform: translateY(-10px);
+            opacity: 0.8;
+        }
+        /* four pictures section */
+/* icon boxes */
+.c-flex{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items:center ;
+            gap: 2vh;
+            /* border: 1px solid green; */
+            padding: 4vh 0;
+            background-size: cover;
+        }
+    
+        .c-icon{
+            border-right: 1px solid rgba(255, 255, 255, 0.527);
+            border-bottom-right-radius: 5px;
+            flex: 1 0px;
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 2vh;
+            align-items: center;
+            width: fit-content;
+            text-align: center;
+            background-color: rgba(220, 220, 220, 0.479);
+           height: 100%;
+           justify-content: space-between;
+        }
+        .icon-box{
+            box-sizing: border-box;
+            display: flex;
+            height: fit-content;
+            aspect-ratio: 1 1;
+            border-radius: 50%;
+            /* border: 3px solid whitesmoke; */
+            color: rgb(177, 110, 10);
+            
+        }
+        .icon-box:hover{
+            background-color: rgb(116, 97, 129);
+            color: white;
+        }
+        .icon-box > i{
+            font-size: 50px;
+            padding: 20px;
+        }
+        .c-icon > h1, p{
+            margin: 0;
+        }
+        .c-icon h1{
+            padding: 2px 10px;
+            background: rgba(172, 152, 115, 0.651);
+            border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        .c-icon p{
+            background: rgba(172, 152, 115, 0.452);
+        }
+/* icon boxes */
+        /* Responsive layout - makes the two sections stack on top of each other instead of next to each other */
+        /*  */
+
+        @media all and (max-width: 600px) {
+                    .header-container {
+                        flex-direction: column-reverse;
+                        }
+                    }
+        @media all and (max-width: 756px){
+            .c-flex{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <div class="nav-container">
+            <div class="nav-header">
+                <div class="site-title">
+                    <p>ቤተ</p>
+                    <div class="mid-line"></div>
+                    <p id="estifo">እስጢፋኖስ</p>
+                </div>
+            </div>
+            <ul class="nav">
+                <li class="nav-item"><a href="./index.html">መግቢያ</a></li>
+                <li class="nav-item"><a href="#">ደብራችን</a></li>
+                <li class="nav-item">
+                  <a href="#">አገልግሎት</a>
+                  <i class="fa-solid fa-angle-down service-arrow arrow"></i>
+                  <ul class="sub-menu">
+                    <li class="sub-menu-item"><a href="#">ጥምቀት</a></li>
+                    <li class="sub-menu-item"><a href="#">ጋብቻ</a></li>
+                    <li class="sub-menu-item education-sub-menu">
+                      <a href="#">ትምህርት</a>
+                      <i class="fa-solid fa-angle-down service-arrow arrow"></i>
+                      <ul class="sub-sub-menu">
+                        <li class="sub-sub-menu-item"><a href="#">መፅሐፍ ቅዱስ</a></li>
+                        <li class="sub-sub-menu-item"><a href="#">የግዕዝ</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a href="#">አገልጋዮቻችን</a></li>
+                <li class="nav-item">
+                  <a href="#">ለመርዳት</a>
+                  <i class="fa-solid fa-angle-down donate-arrow arrow"></i>
+                  <ul class="sub-menu">
+                    <li class="sub-menu-item"><a href="#">ያንድ ጊዜ</a></li>
+                    <li class="sub-menu-item"><a href="#">በየወሩ</a></li>
+                    <li class="sub-menu-item donation-sub-menu">
+                      <a href="#">ሌሎች</a>
+                      <i class="fa-solid fa-angle-down donate-arrow arrow"></i>
+                      <ul class="sub-sub-menu">
+                        <li class="sub-sub-menu-item"><a href="#">በዓይነት</a></li>
+                        <li class="sub-sub-menu-item"><a href="#">ዉርስ</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                    <i class="fa-solid fa-cross" id="home-cross"></i>
+                </li>
+            </ul>
+              <div class="skew-section">
+                <div class="skew-left"></div>
+                <div class="skew-right">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+        </div>
+        <div class="about-header-wrapper">
+            <div class="birana-script"></div>
+            <div class="about-h about1">
+                <h1>በአማርኛ ስዳስድፍ ሳፍጅል ሳዳስድፍ</h1>
+                <p>ስል ልክጅ አሰው አስድስ ፤ አስዳ ስድፍቅር ስድፍስክ አስድቅል ስዳድ ስጅዳ ስድና አስድልፍ [ወሯፕ ስድፍጅ ስድንልፍ ስድልጅቅ ሳድስ ስዳ ስዳ ስዳክዋ ጅስዳ አስችንም ። አስዳል አስድፋ ፋ ፔዋ[] አስዳ አስዳድ አስዳ አስፋድፍ ፖብብን አስዳ አስዳው ቅውዌ ንፕአውድ ፑፕ አስድ አቻ አአፋው አስድ። ስል ልክጅ አሰው አስድስ ፤ አስዳ ስድፍቅር ስድፍስክ አስድቅል ስዳድ ስጅዳ ስድና አስድልፍ [ወሯፕ ስድፍጅ ስድንልፍ ስድልጅቅ ሳድስ ስዳ ስዳ ስዳክዋ ጅስዳ አስችንም ። አስዳል አስድፋ ፋ ፔዋ[] አስዳ አስዳድ አስዳ አስፋድፍ ፖብብን አስዳ አስዳው ቅውዌ ንፕአውድ ፑፕ አስድ አቻ አአፋው አስድ።</p>
+                <p>ስል ልክጅ አሰው አስድስ ፤ አስዳ ስድፍቅር ስድፍስክ አስድቅል ስዳድ ስጅዳ ስድና አስድልፍ [ወሯፕ ስድፍጅ ስድንልፍ ስድልጅቅ ሳድስ ስዳ ስዳ ስዳክዋ ጅስዳ አስችንም ። አስዳ አስዳድ አስዳ አስፋድፍ ፖብብን አስዳ አስዳው ቅውዌ ንፕአውድ ፑፕ አስድ አቻ አአፋው አስድ።</p>
+                <p class="more-text">ስል ልክጅ አሰው አስድስ ፤ አስዳ ስድፍቅር ስድፍስክ አስድቅል ስዳድ ስጅዳ ስድና አስድልፍ [ወሯፕ ስድፍጅ ስድንልፍ ስድልጅቅ ሳድስ ስዳ ስዳ ስዳክዋ ጅስዳ አስችንም ። አስዳል አስድፋ ፋ ፔዋ[] አስዳ አስዳድ አስዳ አስፋድፍ ፖብብን አስዳ አስዳው ቅውዌ ንፕአውድ ፑፕ አስድ አቻ አአፋው አስድ። ስል ልክጅ አሰው አስድስ ፤ አስዳ ስድፍቅር ስድፍስክ አስድቅል ስዳድ ስጅዳ ስድና አስድልፍ [ወሯፕ ስድፍጅ ስድንልፍ ስድል። ስል ልክጅ አሰው አስድስ ፤ አስዳ ስድፍቅር ስድፍስክ አስድቅል ስዳድ ስጅዳ ስድና አስድልፍ [ወሯፕ ስድፍጅ ስድንልፍ ስድልጅቅ ሳድስ ስዳ ስዳ ስዳክዋ ጅስዳ አስችንም ። አስዳል አስድፋ ፋ ፔዋ[] አስዳ አስዳድ አስዳ አስፋድፍ ፖብብን አስዳ አስዳው ቅውዌ ንፕአውድ ፑፕ አስድ አቻ አአፋው አስድ። ስል ልክጅ አሰው አስድስ ፤ አስዳ ስድፍቅር ስድፍስክ አስድቅል ስዳድ ስጅዳ ስድና አስድልፍ [ወሯፕ ስድፍጅ ስድንልፍ ስድል?</p>
+                <button class="read-more-btn" onclick="showMore()">ተጨማሪ</button>
+            </div>
+            <div class="horizontal-divider">
+            </div>
+            <div class="header-container">
+                <div class="left-section">
+                  <h1>በአማርኛ ስዳስድፍ አጋግ አጋፍ</h1>
+                  <h5 class="sub-heading">ልክ ድሳልድ ፋድስልፍልጅ አድፍልጅ አስድፍል ስ አድፍድጅ፤ል አድግ ጋእር ጋእግ  ጋግጋ አግዳፍ ጋህ-እ</h5>
+                  <p class="text-body">ጅድ አግር፤ፕ 43[ፕቲ እቅርው እግህጅ ገርቅፍፕጅ እቅውፈውክይ ግውር ፈውቅፍ ግወቅ ርፍጅ እውፍ ግረ3ፕ እውፍግርውጅ ወግረክ ወግትረጅ እውርገጅ፤ እውትግረ፤ጅ እውትግረት፤ እውርገው፤ ዳፍ አድፍክ፤' አግድስክ አድፍክ አድፍ</p>
+                  <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora et temporibus cupiditate facilis unde. Ad suscipit repellat minus nisi asperiores sunt voluptates perferendis error aperiam, laudantium laboriosam, temporibus possimus debitis hic doloremque assumenda quos consectetur facere! Dolores, minima. Soluta, facere? </p> -->
+            
+                  <ul class="two-columns">
+                    <li>ዘርዝር</li>
+                    <li>ዘርዝር</li>
+                    <li>ዘርዝር</li>
+                    <li>ዘርዝር</li>
+                  </ul>
+                </div>
+                <div class="right-section">
+                  <img id="main-img" src="./images/bcg/naturechurch.jpeg" alt="Picture">
+                </div>
+            </div>
+        <!-- page divider -->
+            <div class="cross-divider">
+                <span>&#10014;</span>
+            </div>
+        <!-- page divider -->
+            <div class="about-pics">
+                <div>
+                    <img class="res-image" src="./images/bcg/Jesus-Prays.jpg" alt="">
+                </div>
+                <div>
+                    <img class="res-image" src="./images/bcg/Jesus-Prays.jpg" alt="">
+                </div>
+                <div>
+                    <img class="res-image" src="./images/bcg/Jesus-Prays.jpg" alt="">
+                </div>
+                <div>
+                    <img class="res-image" src="./images/bcg/Jesus-Prays.jpg" alt="">
+                </div>
+            </div>
+        <!-- page divider -->
+        <div class="cross-divider">
+            <span style="color: yellow;">&#128366;</span>
+        </div>
+        <!-- page divider -->
+            <div class="about-t t-head">
+                <p>ልህ አእፍም ድሳግ ጋስፋ ጋድህ ድስግህ አድስግርግ</p>
+            </div>
+            <div class="about-t t-body">
+                <p id="t-text">ስዳድ ድሳጋ ጋድፍ ጋድስፍድ ጋፍድ አድፍ ኢፕነር ዳፍግ አድፍ ድግ ፍግ ፤ ጅ ድፍግርግ ድፍድግ አድግግ አድስፋ ዳፋድፍ ድፋ አድፍድ አድፍድ አድጋህ ህፍስግ ህ ድፍ ፔስድ ድፍድግ ድጋ ግድፍ ድፍድግ ድፋ አድፍድፍ ድፍድፍ ድፍድ ድፍ አድፍ አድፍ አድግ እርፒ ተር ግግሃ ግዳድፍ ኢኦ ድፍ ድፍድ ድፋ ጋድፍ ግ</p>
+            </div>
+            <!-- page divider -->
+        <div class="cross-divider">
+            <span style="color: red;">&#x26EA;</span>
+        </div>
+        <!-- page divider -->
+            <div class="c-flex">
+                <div class="c-icon">
+                    <div class="icon-box">
+                        <i class="fa-regular fa-sun"></i>
+                    </div>
+                    <h1>ፀሃይ</h1>
+                    <p>ስህዳልድ ፍሳልህ አፍል ፍግክን አድፍ ን ስዳስፍ ጅ፤ልድስፍ ጋስ፤ ጋስብክት፤ ድፍግስትህ ድፍስግ ድስግፍ</p>
+                </div>
+                <div class="c-icon">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-person-praying"></i>
+                    </div>
+                    <h1>ፀልዩ</h1>
+                    <p>ስህዳልድ ፍሳልህ አፍል ፍግክን አድፍ ን ስዳስፍ ጅ፤ልድስፍ ጋስ፤ ጋስብክት፤ ድፍግስትህ ድፍስግ ድስግፍ</p>
+                </div>
+                <div class="c-icon">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h1>ብርሃን</h1>
+                    <p>ስህዳልድ ፍሳልህ አፍል ፍግክን አድፍ ን ስዳስፍ ጅ፤ልድስፍ ጋስ፤ ጋስብክት፤ ድፍግስትህ ድፍስግ ድስግፍ</p>
+                </div>
+                <div class="c-icon">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h1>ክርስቲያን</h1>
+                    <p>ስህዳልድ ፍሳልህ አፍል ፍግክን አድፍ ን ስዳስፍ ጅ፤ልድስፍ ጋስ፤ ጋስብክት፤ ድፍግስትህ ድፍስግ</p>
+                </div>
+            </div>
+            
+            <div class="cross-divider">
+                <span style="color: rgb(87, 42, 42);">&#128330;</span>
+            </div>
+        </div> 
+    </body>
+    <script>
+        function showMore() {
+          var moreText = document.querySelector(".more-text");
+          var btnText = document.querySelector(".read-more-btn");
+        
+          if (moreText.style.display === "none") {
+            moreText.style.display = "inline";
+            btnText.innerHTML = "ቀንስ";
+          } else {
+            moreText.style.display = "none";
+            btnText.innerHTML = "ተጨማሪ";
+          }
+        }
+    // Add event listener to toggle the menu icon and items
+        let menu = document.querySelector(".nav-item:first-child");
+            menu.addEventListener("click", function() {
+            menu.classList.toggle("active");
+        });
+        </script>
+</html>

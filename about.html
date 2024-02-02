@@ -200,78 +200,7 @@
             margin: 0 2px;
         }
        /*  end bottom nav bar*/
-       @media (max-width: 833px) {
-         .nav {
-           flex-direction: column;
-           align-items: flex-start;
-         }
-         .header-container {
-                           flex-direction: column;
-                           }
-         .nav-item {
-           display: none;
-         }
-     
-         .nav-item:first-child {
-           display: block;
-           width: 100%;
-           text-align: center;
-         }
-     
-         .nav-item:first-child a {
-           display: none;
-         }
-     
-         .nav-item:first-child::before {
-           content: "\2630"; /* Menu icon */
-           font-size: 30px;
-         }
-     
-         .nav-item:first-child.active::before {
-           content: "\2715"; /* Close icon */
-         }
-     
-         .nav-item:first-child.active ~ .nav-item {
-           display: block;
-         }
-         .image-box {
-           width: 100%;
-           height: 25%;
-         }
-         .sub-menu{
-          left: 100%;
-          top: 0;
-         }
-       }
-       /* start -- responsible design for the skew nav bar */
-       @media all and (max-width:1092px){
-            .skew-section{
-                display: none;
-            }
-    }
-    @media all and (max-width: 776px){
-        .h-top{
-            padding: 5px 0;
-            flex-direction: column;
-            background-color: rgba(245, 245, 245, 0.685);
-        }
-        .quick-contact, .quick-social{
-            flex: 1 100%;
-            justify-content: space-evenly;
-            gap: 25px;
-        }
-        .header-box{
-            gap: 0px;
-        }
-        .quick-contact > p, .quick-social > p{
-            color: rgb(90, 89, 89);
-        }
-        .sub-menu ,  .sub-sub-menu{
-                position: absolute;
-                top: 0;
-                left: -100%;
-            }
-    }
+   
             /* navbar section css */
             .about-header-wrapper{
                 display: flex;
@@ -292,15 +221,17 @@
             height: 20vh;
             background: no-repeat url(./images/bcg/old-script.jpg);
             background-size: cover;
+            width: 100%;
         }
         .about-h{
+          width: 100%;
             padding: 10px 5px;
             flex: 1 0px;
             /* border: 1px solid green; */
             min-width: 350px;
             background-color: rgba(220, 220, 220, 0.767);
-            border-bottom-left-radius: 4vh;
-            border-bottom-right-radius: 4vh;
+            border-bottom-left-radius: 3vh;
+            border-bottom-right-radius: 3vh;
         }
         .about-h > h1{
             margin-top: 0;
@@ -334,13 +265,14 @@
       font-weight: bold;
     }
         .horizontal-divider{
-            width: 48%;
-            height: 90%;
+            width: 90%;
+            /* height: 90%; */
             border: 1px solid black;
            }
 /* text and picture side by side */
 
 .header-container {
+            width: 100%;
             display: flex;
             flex-direction: row; /* default value */
             background-color: rgba(220, 220, 220, 0.767);
@@ -373,7 +305,7 @@
         .right-section {
             flex: 1 50%;
             background-color: rgba(220, 220, 220, 0.767);
-            border-top-right-radius: 4vh ;
+            border-top-right-radius: 3vh ;
         
         }
         #main-img {
@@ -535,7 +467,81 @@
 /* icon boxes */
         /* Responsive layout - makes the two sections stack on top of each other instead of next to each other */
         /*  */
-
+        @media all and (max-width:1092px){
+            .skew-section{
+                display: none;
+            }
+    }
+        @media (max-width: 833px) {
+         .nav {
+           flex-direction: column;
+           align-items: flex-start;
+         }
+         .header-container {
+                           flex-direction: column;
+                           }
+         .nav-item {
+           display: none;
+         }
+     
+         .nav-item:first-child {
+           display: block;
+           width: 100%;
+           text-align: center;
+         }
+     
+         .nav-item:first-child a {
+           display: none;
+         }
+     
+         .nav-item:first-child::before {
+           content: "\2630"; /* Menu icon */
+           font-size: 30px;
+         }
+     
+         .nav-item:first-child.active::before {
+           content: "\2715"; /* Close icon */
+         }
+     
+         .nav-item:first-child.active ~ .nav-item {
+           display: block;
+         }
+         .image-box {
+           width: 100%;
+           height: 25%;
+         }
+         .sub-menu{
+          left: 100%;
+          top: 0;
+         }
+       }
+        @media screen and (max-width: 776px){
+        .about-header-wrapper{
+              padding: 0 5vw;
+            }
+        .h-top{
+            padding: 5px 0;
+            flex-direction: column;
+            background-color: rgba(245, 245, 245, 0.685);
+        }
+        .quick-contact, .quick-social{
+            flex: 1 100%;
+            justify-content: space-evenly;
+            gap: 25px;
+        }
+        .header-box{
+            gap: 0px;
+        }
+        .quick-contact > p, .quick-social > p{
+            color: rgb(90, 89, 89);
+        }
+        .sub-menu ,  .sub-sub-menu{
+                position: absolute;
+                top: 0;
+                left: -100%;
+            }
+            
+    }
         @media all and (max-width: 600px) {
                     .header-container {
                         flex-direction: column-reverse;
@@ -561,6 +567,7 @@
                 </div>
             </div>
             <ul class="nav">
+              <li class="nav-item"></li>
                 <li class="nav-item"><a href="./index.html">መግቢያ</a></li>
                 <li class="nav-item"><a href="#">ደብራችን</a></li>
                 <li class="nav-item">
@@ -607,9 +614,12 @@
                 </div>
             </div>
         </div>
+        
         <div class="about-header-wrapper">
-            <div class="birana-script"></div>
-            <div class="about-h about1">
+          <div class="birana-script">
+
+          </div>
+            <div class="about-h">
                 <h1>በአማርኛ ስዳስድፍ ሳፍጅል ሳዳስድፍ</h1>
                 <p>ስል ልክጅ አሰው አስድስ ፤ አስዳ ስድፍቅር ስድፍስክ አስድቅል ስዳድ ስጅዳ ስድና አስድልፍ [ወሯፕ ስድፍጅ ስድንልፍ ስድልጅቅ ሳድስ ስዳ ስዳ ስዳክዋ ጅስዳ አስችንም ። አስዳል አስድፋ ፋ ፔዋ[] አስዳ አስዳድ አስዳ አስፋድፍ ፖብብን አስዳ አስዳው ቅውዌ ንፕአውድ ፑፕ አስድ አቻ አአፋው አስድ። ስል ልክጅ አሰው አስድስ ፤ አስዳ ስድፍቅር ስድፍስክ አስድቅል ስዳድ ስጅዳ ስድና አስድልፍ [ወሯፕ ስድፍጅ ስድንልፍ ስድልጅቅ ሳድስ ስዳ ስዳ ስዳክዋ ጅስዳ አስችንም ። አስዳል አስድፋ ፋ ፔዋ[] አስዳ አስዳድ አስዳ አስፋድፍ ፖብብን አስዳ አስዳው ቅውዌ ንፕአውድ ፑፕ አስድ አቻ አአፋው አስድ።</p>
                 <p>ስል ልክጅ አሰው አስድስ ፤ አስዳ ስድፍቅር ስድፍስክ አስድቅል ስዳድ ስጅዳ ስድና አስድልፍ [ወሯፕ ስድፍጅ ስድንልፍ ስድልጅቅ ሳድስ ስዳ ስዳ ስዳክዋ ጅስዳ አስችንም ። አስዳ አስዳድ አስዳ አስፋድፍ ፖብብን አስዳ አስዳው ቅውዌ ንፕአውድ ፑፕ አስድ አቻ አአፋው አስድ።</p>

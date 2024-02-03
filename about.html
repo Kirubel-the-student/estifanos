@@ -6,13 +6,16 @@
         <style>
             /* navbar section css */
         .nav-container{
-            margin: 0 12vw;
-            min-height: 8vh;
+            min-height: 15vh;
+            margin: 20px 12vw 5px 12vw;
+            /* min-height: 8vh; */
             display: flex;
             flex-direction: row;
             background: url(./images/bcg/c2.jpeg);
+            align-items: center;
         }
         .nav {
+            min-height: 8vh;
             width: calc(100% - 120px);
             display: flex;
             flex-direction: row;
@@ -544,8 +547,10 @@
                 top: 0;
                 left: -100%;
             }
-            
+        .education-sub-menu:hover .service-arrow, .donation-sub-menu:hover  .donate-arrow {
+    transform: rotate(90deg);
     }
+  }
         @media all and (max-width: 600px) {
                     .header-container {
                         flex-direction: column-reverse;
@@ -592,7 +597,7 @@
                 </li>
                 <li class="nav-item"><a href="#">አገልጋዮቻችን</a></li>
                 <li class="nav-item">
-                  <a href="#">ለመርዳት</a>
+                  <a href="./donate.html">ለመርዳት</a>
                   <i class="fa-solid fa-angle-down donate-arrow arrow"></i>
                   <ul class="sub-menu">
                     <li class="sub-menu-item"><a href="#">ያንድ ጊዜ</a></li>

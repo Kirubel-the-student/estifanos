@@ -1,0 +1,1036 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body{
+      background-image: url(./images/bcg/big\ hand.jpg);
+      background-size: cover;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .container {
+      padding: 0 12vw;
+      margin: 0 auto;
+    }
+    .nav-section{
+      width: 100%;
+      border: 1px solid black;
+      background: gray url(./images/bcg/hands.jpg) no-repeat left top;
+      height: 40vh;
+    }
+    /* Navigation bar css */
+    .nav-container{
+            min-height: 15vh;
+            margin: 20px 12vw 5px 12vw;
+            /* min-height: 8vh; */
+            display: flex;
+            flex-direction: row;
+            background: url(./images/bcg/c2.jpeg);
+            align-items: center;
+        }
+        .nav {
+            min-height: 8vh;
+            width: calc(100% - 120px);
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(130deg, rgba(80, 150, 80, 0.9) 0%,rgba(80, 150, 80, 0.9) 60%, rgba(199, 199, 58, 0.9) 60%, rgba(199, 199, 58, 0.9) 100%);
+            align-items: center;
+            border-top-left-radius: 4vh;
+            border-bottom-left-radius: 4vh;
+          }
+       .nav *{
+            transition: all 0.3s ease;
+       }
+     .nav-header{
+            width: auto;
+            /* padding: 0 20px; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4vh;
+            font-weight: bold;
+            flex-shrink: 1;
+          }
+       .nav-item {
+            position: relative;
+            padding: 5px 1vw;
+            /* display: flex;
+            flex: 1 row;
+            justify-content: space-evenly; */
+       }
+       li:last-child {
+           margin-left: auto;
+       }
+       #home-cross{
+           font-size: 2em;
+           color: indigo;
+       }
+       .nav-item a {
+          text-decoration: none;
+          color: black;
+       }
+     
+       .nav-item:hover a {
+         text-decoration: underline;
+         text-underline-offset: 5px;
+       }
+     
+       .nav-item:hover .sub-menu {
+         display: block;
+         z-index: 10;
+       }
+     
+       .sub-menu {
+         display: none;
+         position: absolute;
+         top: 100%;
+         left: 0;
+         list-style: none;
+         margin: 0;
+         padding: 0;
+         background-color: rgba(80, 150, 80, 0.8);
+         border: 1px solid gray;
+       }
+     
+       .sub-menu-item {
+         padding: 10px 10px;
+         width: fit-content;
+         position: relative;
+       }
+     
+       .sub-menu-item a {
+         text-decoration: none;
+         color: black;
+       }
+     
+       .sub-menu-item:hover a {
+         text-decoration: underline;
+         text-underline-offset: 5px;
+       }
+     
+       .sub-menu-item:hover .sub-sub-menu {
+         display: block;
+       }
+       .education-sub-menu:hover .service-arrow, .donation-sub-menu:hover  .donate-arrow {
+    transform: rotate(-90deg);
+    }
+       .sub-sub-menu {
+         display: none;
+         position: absolute;
+         top: 0;
+         left: 100%;
+         list-style: none;
+         margin: 0;
+         padding: 0;
+         background-color: rgba(80, 150, 80, 0.8);
+         border: 1px solid gray;
+       }
+       li:hover .service-arrow,
+    li:hover .donate-arrow{
+    transform: rotate(180deg);
+    }
+       .sub-sub-menu-item {
+         padding: 10px 15px;
+       }
+     
+       .sub-sub-menu-item a {
+         text-decoration: none;
+         color: black;
+       }
+     
+       .sub-sub-menu-item:hover a {
+         text-decoration: underline;
+         text-underline-offset: 5px;
+       }
+     
+       /* Custom colors for each nav item */
+       .nav-item:nth-child(1):hover a {
+         text-decoration-color: red;
+       }
+     
+       .nav-item:nth-child(2):hover a {
+         text-decoration-color: green;
+       }
+     
+       .nav-item:nth-child(3):hover a {
+         text-decoration-color: blue;
+       }
+     
+       .nav-item:nth-child(4):hover a {
+         text-decoration-color: purple;
+       }
+     
+       .nav-item:nth-child(5):hover a {
+         text-decoration-color: orange;
+       }
+       /* bottom nav bar */
+        .site-title{
+            /* width: 300px; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4vh;
+            font-weight: bold;
+            border-top: 1px solid rgba(0, 0, 0, 0.623);
+            border-right: 1px solid rgba(153, 205, 50, 0.623);
+        }
+        .site-title *{
+            margin: 0;
+        }
+        #estifo{
+            color: indigo;
+        }
+        .skew-section{
+            width: 120px;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            height: 8vh;
+            /* display: none; */
+        }
+        .skew-left{
+            height: 100%;
+            width: 20px;
+            transform: skewY(-30deg);
+            position: relative;
+            bottom: calc(10px * 0.57735026918962);
+            background-color: whitesmoke;
+        }
+        .skew-right{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            position: relative;
+            bottom: calc(20px * 0.57735026918962);
+            background-color: whitesmoke;        }
+
+        /* sparators */
+        .mid-line{
+            width: 1px;
+            height: 60%;
+            background-color: gray;
+            margin: 0 2px;
+        }
+       /*  end bottom nav bar*/
+    /* Navigation bar css */
+    
+    .section {
+      padding: 20px 0;
+    }
+
+    .section-1 {
+      height: 50vh;
+      /* background: url("../images/bcg/ethiopia-orphans.jpg"), url(../images/bcg/civil\ war.jpg) no-repeat center center; */
+      background-image: url("./images/bcg/ethiopia-orphans.jpg"), url(./images/bcg/civil\ war.jpg);
+      background-size: cover;
+      position: relative;
+    }
+    .content {
+      width: 100%;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .content h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .content p {
+      width: 80%;
+      font-size: 24px;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
+
+    .content .btn {
+      display: inline-block;
+      padding: 10px 30px;
+      border: none;
+      border-radius: 5px;
+      background:   rgba(185, 6, 230, 0.493);
+      color: white;
+      margin-bottom: 40px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .content .btn:hover {
+      background: rgba(211, 211, 211, 0.459);
+      color: black;
+    }
+    .button-container{
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+        /* border: 1px solid yellow; */
+        justify-content: space-around;
+        margin-top: 8vh;
+    }
+    .section-2 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .column img{
+        border: 3px solid whitesmoke;
+        border-radius: 5px;
+    }
+
+    .image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .donate {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: rgb(28, 44, 92);
+      padding: 10px;
+    }
+
+    .donate .btn {
+      margin: 10px auto;
+      padding: 10px;
+      border-radius: 15px;
+      background: yellow;
+    }
+
+    .donate p{
+        color: white;
+        font-size: 1.4em;
+        text-align: center;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      width: 100%;
+      color: rgb(28, 44, 92);
+      
+    }
+
+    .info .btn {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      width: 100%;
+      padding: 10px 0;
+      background-color: rgb(28, 44, 92);
+      font-size: 1.5rem;
+      color: white;
+    }
+
+    .link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      color: rgb(28, 44, 92);
+
+    }
+    .link h2{
+        margin-top: 30px;
+    }
+    .link a {
+      /* color: blue; */
+      text-decoration: underline;
+      color: rgb(53, 53, 53);
+      font-size: 18px;
+      text-align: center;
+    }
+    .link p{
+        color: rgb(53, 53, 53);
+        line-height: 2em;
+        font-size: 18px;
+        text-align: center;
+    }
+    .text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      font-size: 24px;
+    }
+
+    .section-3 {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+    }
+
+    .section-3 h2 {
+      text-align: center;
+    }
+
+    .picture {
+      width: 50vw;
+      height: 50vh;
+      object-fit: cover;
+      margin: 0 auto;
+    }
+
+    .media {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .media img {
+      width: 45%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .media iframe {
+      width: 45%;
+      height: 300px;
+    }
+
+    .videos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+    .videos iframe {
+      width: 100%;
+      height: 200px;
+    }
+
+    .section-4 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .section-4 .btn {
+      margin-top: 20px;
+      width: 40%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      font-size: 18px;
+      background: rgb(28, 44, 92);
+      color: white;
+      align-self: center;
+    }
+    .section-4 p, ol{
+        text-align: left;
+        margin-top: 20px;
+        font-size: 18px;
+        line-height: 2rem;
+    }
+    .section-4 p{
+        font-weight: bold;
+    }
+    .section-4 ol{
+        margin-left: 20px;
+        width: 80%;
+    }
+    .section-4 ol li ul {
+        margin-left: 50px;
+    }
+    .section-5 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+      background: linear-gradient(to right, lightgreen, lightblue);
+    }
+
+    .section-5 img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .section-5 .content {
+        margin-left: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-around;
+      color: rgb(28, 44, 92);
+
+    }
+
+    .section-5 .content h3 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .section-5 .content p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      width: 80%;
+      text-align: left;
+    }
+
+    .section-5 .content button {
+      margin-top: 10px;
+      width: 50%;
+      color: white;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 16px;
+      background: rgb(28, 44, 92);
+    }
+
+    /* Media queries for responsive design */
+    @media all and (max-width:1092px){
+            .skew-section{
+                display: none;
+            }
+          }
+          @media (max-width: 833px) {
+         .nav {
+           flex-direction: column;
+           align-items: flex-start;
+         }
+         .nav-item {
+           display: none;
+         }
+     
+         .nav-item:first-child {
+           display: block;
+           width: 100%;
+           text-align: center;
+         }
+     
+         .nav-item:first-child a {
+           display: none;
+         }
+     
+         .nav-item:first-child::before {
+           content: "\2630"; /* Menu icon */
+           font-size: 30px;
+         }
+     
+         .nav-item:first-child.active::before {
+           content: "\2715"; /* Close icon */
+         }
+     
+         .nav-item:first-child.active ~ .nav-item {
+           display: block;
+         }
+         .image-box {
+           width: 100%;
+           height: 25%;
+         }
+         .sub-menu{
+          left: 100%;
+          top: 0;
+         }
+       }
+       @media screen and (max-width: 776px){
+            /* .nav-container{
+              margin: 0 5vw;
+            } */
+        .sub-menu ,  .sub-sub-menu{
+                position: absolute;
+                top: 0;
+                left: -100%;
+                
+            }
+            .education-sub-menu:hover .service-arrow, .donation-sub-menu:hover  .donate-arrow {
+    transform: rotate(90deg);
+          }
+        }
+    @media (max-width: 768px) {
+      .section-1 {
+        height: 70vh;
+      }
+
+      .section-1 .content h1 {
+        font-size: 24px;
+      }
+
+      .section-1 .content p {
+        font-size: 16px;
+      }
+      .button-container{
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+      }
+      .button-container button {
+        margin-bottom: 20px;
+        font-size: 14px;
+        width: fit-content;
+      }
+
+      .section-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .section-3 .picture {
+        width: 100%;
+        /* height: 40vh; */
+      }
+      .videos{
+        border: 1px solid black;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .videos iframe{
+        width: 100%;
+      }
+      
+      .section-3 .media {
+        flex-direction: column;
+      }
+
+      .section-3 .media img {
+        width: 100%;
+        height: 200px;
+        margin-bottom: 20px;
+      }
+
+      .media iframe {
+        width: 100%;
+        height: 200px;
+      }
+
+      .section-5 {
+        grid-template-columns: 1fr;
+      }
+
+      .section-5 img {
+        display: none;
+      }
+    }
+
+    /* divider line css */
+    .line-container{
+        margin-top: 20px;
+        /* width: 90vw; */
+        height: 8vh;
+        display: flex;
+        flex: 1 row;
+        align-items: center;
+        justify-content: center;
+    }
+    .line{
+        height: 2px;
+        background: linear-gradient(to right, black, white, black, white);
+    }
+    .line-l  {
+        width: 35vw;  
+    }
+    .line-s{
+        width: 20vw;
+    }
+    .line-divider{
+        font-size: 40px;
+    }
+    /* divider line css */
+    /*  Donate footer section*/
+    #footer{
+                width: 100vw;
+                padding: 3vh 0;
+                background: rgb(48, 36, 36);
+                display: flex;
+                flex-direction: column;
+            }
+            .upper-footer{
+                width: 100%;
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .upper-footer-section{
+                /* border: 1px solid yellow; */
+                flex-shrink: 1;
+                width: 33%;
+                /* width: 350px; */
+                /* padding:0 20px; */
+                color: white;
+                padding: 0 0 3vh 10px;
+            }
+            .section-body{
+                font-size: 12px;
+                font-weight: 100;
+            }
+            .upper-footer-section > ul{
+                padding-left: 8px;
+                color: white;
+                font-size: 12px;
+                font-weight: 100;
+                line-height: 20px;
+                list-style: none;
+            }
+            .upper-footer-section > ul > li{
+                color: violet;
+                font-size: 12px;
+            }
+            .upper-footer-section > ul > li::before{
+               /* Unicode for a bullet */
+                content: "\2022";
+                color: white;
+            }
+            .lower-footer{
+                padding: 0 5vw;
+                border-top: 1px solid gray;
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .copy-right{
+                font-size: 14px;
+                flex-shrink: 0;
+                width: 600px;
+                height: fit-content;
+                text-align: left;
+                color: white;
+            }
+            .author{
+                color: rgb(20, 175, 227);
+                letter-spacing: 5px;
+            }
+            .footer-icons{
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-evenly;
+                width: 300px;
+                flex-shrink: 0;
+            }
+            .footer-icons > i{
+                margin-left: 1vw;
+            }
+            #to-top{
+                font-size: 2em;
+            }
+            /*  Footer responsive design*/
+            @media all and (max-width:1239px){
+                .upper-footer-section{
+                        width: 300px;
+                    }
+            }
+            @media all and (max-width:959px){
+                .upper-footer-section{
+                        width: 250px;
+                    }
+        .lower-footer{
+            padding: 0 4.5vw;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        .footer-icons{
+            order: 5;
+            align-self: flex-end;
+            position: absolute;
+            right: 4.5vw;
+        }
+            }
+            @media all and (max-width:767px){
+                .upper-footer{
+            flex-flow: column nowrap;
+        }
+        .upper-footer-section{
+            width: 60%;
+            padding-bottom: 2vh;
+        }
+        .lower-footer{
+            flex-flow: column column-reverse;
+            justify-content: center;
+        }
+        .lower-footer > *{
+            text-align: center;
+            width: 90%;
+            margin: 5px;
+        }
+        .copy-right{
+            order: 2;
+        }
+        .footer-icons{
+            position: unset;
+            order: 3;
+            display: flex;
+            justify-content: center;
+        }
+        #to-top{
+            order: 1;
+        }
+    
+            }
+    /*  Donate footer section*/
+  </style>
+</head>
+<body>
+  <div class="nav-container">
+    <div class="nav-header">
+        <div class="site-title">
+            <p>ቤተ</p>
+            <div class="mid-line"></div>
+            <p id="estifo">እስጢፋኖስ</p>
+        </div>
+    </div>
+    <ul class="nav">
+      <li class="nav-item"></li>
+        <li class="nav-item"><a href="./index.html">መግቢያ</a></li>
+        <li class="nav-item"><a href="./about.html">ደብራችን</a></li>
+        <li class="nav-item">
+          <a href="#">አገልግሎት</a>
+          <i class="fa-solid fa-angle-down service-arrow arrow"></i>
+          <ul class="sub-menu">
+            <li class="sub-menu-item"><a href="#">ጥምቀት</a></li>
+            <li class="sub-menu-item"><a href="#">ጋብቻ</a></li>
+            <li class="sub-menu-item education-sub-menu">
+              <a href="#">ትምህርት</a>
+              <i class="fa-solid fa-angle-down service-arrow arrow"></i>
+              <ul class="sub-sub-menu">
+                <li class="sub-sub-menu-item"><a href="#">መፅሐፍ ቅዱስ</a></li>
+                <li class="sub-sub-menu-item"><a href="#">የግዕዝ</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="#">አገልጋዮቻችን</a></li>
+        <li class="nav-item">
+          <a href="#">ለመርዳት</a>
+          <i class="fa-solid fa-angle-down donate-arrow arrow"></i>
+          <ul class="sub-menu">
+            <li class="sub-menu-item"><a href="#">ያንድ ጊዜ</a></li>
+            <li class="sub-menu-item"><a href="#">በየወሩ</a></li>
+            <li class="sub-menu-item donation-sub-menu">
+              <a href="#">ሌሎች</a>
+              <i class="fa-solid fa-angle-down donate-arrow arrow"></i>
+              <ul class="sub-sub-menu">
+                <li class="sub-sub-menu-item"><a href="#">በዓይነት</a></li>
+                <li class="sub-sub-menu-item"><a href="#">ዉርስ</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+            <i class="fa-solid fa-cross" id="home-cross"></i>
+        </li>
+    </ul>
+      <div class="skew-section">
+        <div class="skew-left"></div>
+        <div class="skew-right">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </div>
+</div>
+  <div class="container">
+    <!-- HTML code for the web page content -->
+    <!-- Section 1 -->
+    <div class="section section-1">
+      <div class="content">
+        <h1>ርዕስ</h1>
+        <p>ጅልስ ክክጅግ ኡተስ አስድ አስድ ችቫ ንምሽ በኔ ጅክስ ንቭብህ ምጅክዝ ሎፕ ንቭፍድ ንህጅቅል ችደ ንሕት አንችቃ!</p>
+        <div class="button-container">
+            <button class="btn">አበበ</button>
+            <button class="btn">ጫላ</button>
+        </div>
+        
+      </div>
+    </div>
+    <!-- divider line -->
+    <div class="line-container">
+      <div class="line line-l"></div>
+      <span class="line-divider" style="color:red">&#128330;</span>
+      <div class="line line-s"></div>
+      <span class="line-divider" style="color: green; transform: scaleX(-1);">&#128330;</span>
+      <div class="line line-l"></div>
+    </div>
+    <!-- divider line -->
+    <!-- Section 2 -->
+
+    <div class="section section-2">
+      <div class="column">
+        <img src="./images/bible_figures/donation.jpg" class="image" onclick="window.location.href='page-1.html'">
+        <div class="donate">
+          <button class="btn">Donate</button>
+          <p>አድርፍ ህክ ርውቅ ኢፔስ ጅልስ ክክጅግ ኡተስ አስድ አስድ ችቫ ንምሽ ጅክዝ ሎፕ ንቭፍድ ንህጅቅል ቃ አስድ ?</p>
+        </div>
+      </div>
+      <div class="column">
+        <img src="./images/bible_figures/Donation-in-kind.jpg" class="image" onclick="window.location.href='page-2.html'">
+        <div class="info">
+          <button class="btn">አሁን ይለግሱ</button>
+          <p>ለክል ስድ አድፍስድጥቅ አር ስዳ ድፋስስድ ስዳድፍግዳስፍ ፋድፋስዳ ስድስድ ድፋዳፍስድ ስድስዳ። 
+            ሽድቅ ድ;ፍጅ አውርፕ
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <img src="./images/bible_figures/donation-charity.jpg" class="image" onclick="window.location.href='page-3.html'">
+        <div class="link">
+          <h2>ተስማሚ ርዕስ</h2>
+          <p>ለክል ስድ አድፍስድጥቅ አር ስዳ ድፋስስድ ስዳድፍግዳስፍ ፋድፋስዳ ስድስድ ስድስዳ።</p>
+          <a href="page-4.html">እዚህ ላይ ይጫኑ</a>
+        </div>
+      </div>
+      <div class="column">
+        <img src="./images/bible_figures/making-a-donation.jpeg" class="image" onclick="window.location.href='page-5.html'">
+        <div class="text">
+          <p>Some text</p>
+        </div>
+      </div>
+    </div>
+    <!-- divider line -->
+    <div class="line-container">
+      <div class="line line-l"></div>
+      <span class="line-divider" style="color:red">&#128330;</span>
+      <div class="line line-s"></div>
+      <span class="line-divider" style="color: green; transform: scaleX(-1);">&#128330;</span>
+      <div class="line line-l"></div>
+    </div>
+    <!-- divider line -->
+    <!-- Section 3 -->
+    <div class="section section-3">
+      <h2>በናንተ እርዳታ የተሰሩ ስራዎችን</h2>
+      <img src="./images/bible_figures/donation.jpg" class="picture">
+      <div class="media">
+        <img src="./images/bible_figures/Donation-in-kind.jpg">
+        <!-- <video src="https://www.youtube.com/watch?v=ZhSzoeEDwZM" controls></video> -->
+        <!-- <iframe
+src="https://www.youtube.com/watch?v=ZhSzoeEDwZM">
+</iframe> -->
+        <iframe width="709" height="399" src="https://www.youtube.com/embed/wW72Vduuuh8" title="🔴ልደት በዓል የገና ዝማሬዎች ስብስብ//Ethiopian Orthodox Tewahedo Mezmur Collection" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="videos">
+        <!-- <video src="video-2.mp4" controls></video>
+        <video src="video-3.mp4" controls></video>
+        <video src="video-4.mp4" controls></video>
+        <video src="video-5.mp4" controls></video> -->
+        <iframe  width="709" height="399" src="https://www.youtube.com/embed/w7TAJIjniHk" title="🔴  አዲስ ዝማሬ &quot; ሚካኤል ይለ&#39;ይብኛል &quot; ዘማሪ ዲያቆን አቤል መክብብ @-mahtot  @ሚካኤል" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="709" height="399" src="https://www.youtube.com/embed/2Zw9BbSlJnM" title="🛑 አዲስ ዝማሬ&quot;ገብርኤል መልአከ ራማ&quot; ዘማሪ ዲያቆን አቤል መክብብ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="709" height="399" src="https://www.youtube.com/embed/w7TAJIjniHk" title="🔴  አዲስ ዝማሬ &quot; ሚካኤል ይለ&#39;ይብኛል &quot; ዘማሪ ዲያቆን አቤል መክብብ @-mahtot  @ሚካኤል" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="709" height="399" src="https://www.youtube.com/embed/2Zw9BbSlJnM" title="🛑 አዲስ ዝማሬ&quot;ገብርኤል መልአከ ራማ&quot; ዘማሪ ዲያቆን አቤል መክብብ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+    <!-- divider line -->
+    <div class="line-container">
+      <div class="line line-l"></div>
+      <span class="line-divider" style="color:red">&#128330;</span>
+      <div class="line line-s"></div>
+      <span class="line-divider" style="color: green; transform: scaleX(-1);">&#128330;</span>
+      <div class="line line-l"></div>
+    </div>
+    <!-- divider line -->
+    <!-- Section 4 -->
+    <div class="section section-4">
+      <button class="btn">ተጨማሪ አርዳታ</button>
+      <p>አንደዚና አንደዛ ላማድረግ ከታች ያለውን ይመልከቱ</p>
+      <ol>
+        <li>ንደዚና አንደዛ ያርድጉ
+            <ul> 
+                <li>አንደዝ
+                    <ul>
+                        <li>አንደዛዛ ቦንድዜ</li>
+                    </ul>
+                </li> 
+            </ul>
+        </li>
+        <li>ጆብንርድ ድግክልዝ</li>
+        <li>ፕልምንቆ ንህትርድዝ</li>
+      </ol>
+    </div>
+    <!-- divider line -->
+    <div class="line-container">
+      <div class="line line-l"></div>
+      <span class="line-divider" style="color:red">&#128330;</span>
+      <div class="line line-s"></div>
+      <span class="line-divider" style="color: green; transform: scaleX(-1);">&#128330;</span>
+      <div class="line line-l"></div>
+    </div>
+    <!-- divider line -->
+    <!-- Section 5 -->
+    <div class="section section-5">
+      <img src="./images/bible_figures/making-a-donation.jpeg">
+      <div class="content">
+        <h2>ትልቅ አርዕስት ጽሁፍ</h2>
+        <h3>አነስ ያለ ርዕስ</h3>
+        <p>ሐተታ መጠነኛ ሐተታ መጠነኛ ሐተታ መጠነኛ ሐተታ መጠነኛ ሐተታ መጠነኛ ሐተታ መጠነኛ</p>
+        <button>እዚህ ላይ ይጫኑ</button>
+      </div>
+    </div>
+    <!-- section divider -->
+      <div class="line-container">
+        <div class="line line-l"></div>
+        <span class="line-divider" style="color:red">&#128330;</span>
+        <div class="line line-s"></div>
+        <span class="line-divider" style="color: green; transform: scaleX(-1);">&#128330;</span>
+        <div class="line line-l"></div>
+      </div>
+  </div>
+    <!--  section divider-->
+<!-- footer section -->
+  <div id="footer">
+    <div class="upper-footer">
+        <div class="upper-footer-section">
+            <p class="section-header">እዚህ ላይ ይፃፍ</p>
+            <p class="section-body"> እዚህ ላይ ይፃፍ እዚህ ላይ ይፃፍ ይፃፍ እዚህ ላይ ይፃፍ ይፃፍ እዚህ ላይ ይፃፍ ይፃፍ እዚህ ላይ ይፃፍ እዚህ ላይ ይፃፍ እዚህ ላይ ይፃፍ እዚህ ላይ ይፃፍ እዚህ ላይ ይፃፍ እዚህ ላይ ይፃፍ</p>
+        </div>
+        <div class="upper-footer-section">
+            <p class="section-header">እዚህ ላይ ይፃፍ</p>
+            <p class="section-body"> እዚህ ላይ ይፃፍ እዚህ ላይ ይፃፍ ይፃፍ እዚህ ላይ ይፃፍ ይፃፍ እዚህ ላይ ይፃፍ ይፃፍ እዚህ ላይ ይፃፍ እዚህ ላይ ይፃፍ እዚህ ላይ ይፃፍ እዚህ ላይ ይፃፍ እዚህ ላይ ይፃፍ እዚህ ላይ ይፃፍ</p>
+        </div>
+        <div class="upper-footer-section" id="right-most">
+            <p class="section-header">እዚህ ላይ ይፃፍ</p>
+                <ul>
+                    <li><span class="list-text"> ዝርዝሩን እዚህ ላይ ፃፍ እዚህ ላይ ፃፍ</span></li>
+                    <li><span class="list-text"> ዝርዝሩን እዚህ ላይ ፃፍ እዚህ ላይ ፃፍ</span></li>
+                    <li><span class="list-text"> ዝርዝሩን እዚህ ላይ ፃፍ እዚህ ላይ ፃፍ</span></li>
+                </ul>
+        </div>
+    </div>
+    <div class="lower-footer">
+        <p class="copy-right"><i class="fa-regular fa-copyright"></i> የደብር ዘውግ በ <span class="author">ኪሩቤል አ.</span> <span> | መብቱ በህግ የተጠበቀ ነው!</p>
+        <p class="footer-icons">
+            <i class="fa-brands fa-facebook" style="color: #6e6e6f;"></i><i class="fa-brands fa-skype" style="color: #6e6e6f;"></i>
+            <i class="fa-brands fa-twitter" style="color: #6e6e6f;"></i>
+            <i class="fa-brands fa-vimeo-v" style="color: #6e6e6f;"></i>
+            <i class="fa-brands fa-instagram" style="color: #6e6e6f;"></i>
+            
+        </p>
+        <a id="to-top" href="#" target="_top"><i class="fa-solid fa-angle-up" style="color: #6e6e6f;"></i></a>
+    </div>
+  </div>
+
+<!-- footer section -->
+<script>
+  // Add event listener to toggle the menu icon and items
+  let menu = document.querySelector(".nav-item:first-child");
+  menu.addEventListener("click", function() {
+    menu.classList.toggle("active");
+  });
+</script>
+</body>
+</html>

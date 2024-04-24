@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+         #btn-back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+    }
+    </style>
+</head>
+<body>
+    <!-- nav bar -->
+    <nav style="background-image: linear-gradient(130deg, rgb(80, 150, 80) 0%,rgb(80, 150, 80) 60%, rgb(199, 199, 58) 60%, rgb(199, 199, 58) 100%);" class="navbar sticky-top navbar-expand-lg mb-4 rounded-3">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <i style="color: rgb(139, 5, 139); font-size: 2rem;" class="fa-solid fa-cross"></i>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/Home/index.html">መግቢያ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Home/about.html">ደብራችን</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  አገልግሎት
+                </a>
+                <ul style="background-color: greenyellow;" class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">ጥምቀት</a></li>
+                  <li><a class="dropdown-item" href="#">ትምህርት</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">ሌሎች</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../donate.html">ለመርዳት</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <!-- nav bar -->
+
+    <!-- background image and lay over text -->
+    <div class="container">
+        <div class="bg-image py-5 d-flex" style="background-image:
+            linear-gradient(to right, rgba(245, 246, 252, 0.52), #40F99B),
+            url('images/assosa\ gebriel.png'); height: 60vh; background-size: 100% 100%; background-repeat: no-repeat;">
+            <div class="align-self-center px-5" style="color: rgba(120, 4, 173, 0.89);">
+                <p class="font-weight-bold" style="color: rgba(120, 4, 173, 0.89);">አገልግሎቶቻችን</p>
+                <h2 class="font-weight-bold col-md-7">በቤተክርስቲያናችን የሚሰጡፍድ አገልግሎቶች ስድድፍጋርግ</h2>
+                <p class="col-md-7 ">ለመጪዉ ትውልድ አስክጅድ አስልቅድ አስፋግ አድፍድ አስድ አስድ አሳውዌ ጅልላ ስድ።</p>
+            </div>
+        </div>
+    </div>
+    <div  style="background-color: #F5FBEF;" class="container mt-5 col-12 d-flex justify-content-between equal-height-row flex-wrap">
+        <div class="col-md-6 flex-column d-flex justify-content-between ps-2 pe-3">
+            <p class="small ">በጨረፍታ</p>
+            <h3 class="font-weight-bold">ክህስድ አስጠል ሎአታ ስድግ አስችግ ንባስድ አስግ አስድፍ</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, libero consectetur impedit eum possimus debitis sed, repellendusmet qui quidem?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, molestiae. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, necessitatibus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, aspernatur.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi</p>
+            <button style="background-color: #FF3E41;" type="button" class="btn btn-lg align-self-start px-5">Button</button>
+        </div>
+        <div class="col-md-6 d-flex flex-column justify-content-between ps-md-3">
+            <div class="mb-2 d-flex">
+                <img src="images/church-entrance.jpg" class="img-fluid rounded-3" alt="">
+            </div>
+           <div class="d-flex justify-content-between">
+                <div class="me-2 ">
+                    <img src="images/church-entrance.jpg" alt="" class="img-fluid rounded-3">
+                </div>
+                <div class="ms-2">
+                    <img src="images/church-entrance.jpg" alt="" class="img-fluid rounded-3">
+                </div>
+           </div>
+        </div>
+    </div>
+    <!-- <div class="container d-flex flex-column border justify-content-between px-3" style="height: 100px; background-color: #577399;">
+        <div class="col-6 bg-danger-subtle" style="height: 20px;"></div>
+        <div class="col-6 bg-body-secondary d-flex justify-content-between" style="height: 20px;">
+            <div class="bg-black col-6 align-self-end pe-md-2" style="height: 5px;"></div>
+            <div class="bg-black col-6 align-self-end ps-md-2" style="height: 5px;"></div>
+        </div>
+    </div> -->
+    <!-- back to top -->
+    <button
+        type="button"
+        class="btn btn-danger btn-floating btn-lg"
+        id="btn-back-to-top"
+        >
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- back to top -->
+    <!-- offers section -->
+    <div style="background: linear-gradient(to right, #cac6c37a, white);" class="container my-5 d-flex flex-column justify-content-center">
+        <div class="text-center mt-3 fw-bolder">
+            <p style="color: red;" class="mb-0 fs-6">Small text</p>
+            <p class="text-black fs-3 mt-0">አአራ እኦአአት ናአራፖአዓጫ ልክሳው ብስቭሰ</p>
+        </div>
+        <div class="d-flex flex-wrap justify-content-center rounded-2 px-5 py-2">
+            <div style="background-color: #a5978b7a; width:18rem" class="text-start px-3 text-wrap py-4">
+                <p><span class="h3 fw-bolder">Monthly</span> <span class="display-6">/</span> <span class="text-muted">2D per week</span></p>
+                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus fugiat enim voluptatum? Vero, quod alias.</p>
+                <div>
+                    <h4>Heading</h4>
+                    <ul style="list-style: none;
+                        list-style-position: inside;
+                        padding-left: 0;" class="text-muted">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+                              </svg> ሕከር አቫው ኦፐአ
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+                              </svg> ሕከር አቫው ኦፐአ
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+                              </svg> ሕከር አቫው ኦፐአ
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+                              </svg> ሕከር አቫው ኦፐአ
+                        </li>
+                    </ul>
+                </div>
+                <button type="button" class="px-5">ላሰር ለአጣ</button>
+            </div>
+            <div style="background-color: #360568; width:18rem" class="text-start text-white px-3 text-wrap py-4 position-relative">
+                <p class="text-white"><span class="h3 fw-bolder">Monthly</span> <span class="display-6">/</span> <span >2D per week</span></p>
+                <p class="fw-lighter text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus fugiat enim voluptatum? Vero, quod alias.</p>
+                <div>
+                    <h4>Heading</h4>
+                    <ul style="list-style: none;
+                        list-style-position: inside;
+                        padding-left: 0;" class="text-white-50 ">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+                              </svg> ሕከር አቫው ኦፐአ
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+                              </svg> ሕከር አቫው ኦፐአ
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+                              </svg> ሕከር አቫው ኦፐአ
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+                              </svg> ሕከር አቫው ኦፐአ
+                        </li>
+                    </ul>
+                    <!-- green top part -->
+                    <div style="width:14rem; font-size: 10px; background-color: rgb(9, 99, 9);" class="text-center text-white py-1 position-absolute top-0 start-50 translate-middle-x">
+                        ሕካኤ ፓቻድቭ አስድ አድፍ
+                    </div>
+                    <!-- green top part -->
+                </div>
+                <button type="button" class="px-5 fw-bold">ላሰር ለአጣ</button>
+            </div>
+            <div style="background: linear-gradient(to right, #a5978b7a, white); width:18rem" class="text-start px-3 text-wrap py-4">
+                <p><span class="h3 fw-bolder">Monthly</span> <span class="display-6">/</span> <span class="text-muted">2D per week</span></p>
+                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus fugiat enim voluptatum? Vero, quod alias.</p>
+                <div>
+                    <h4>Heading</h4>
+                    <ul style="list-style: none;
+                        list-style-position: inside;
+                        padding-left: 0;" class="text-muted">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+                              </svg> ሕከር አቫው ኦፐአ
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+                              </svg> ሕከር አቫው ኦፐአ
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+                              </svg> ሕከር አቫው ኦፐአ
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="green" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+                              </svg> ሕከር አቫው ኦፐአ
+                        </li>
+                    </ul>
+                </div>
+                <button type="button" class="px-5">ላሰር ለአጣ</button>
+            </div>
+        </div>
+    </div>
+    <!-- offers section -->
+    <div style="background-color: rgb(43, 2, 82);" class="container-fluid pt-5 pb-5 flex-wrap">
+        <div class="container text-center text-white mb-5">
+            <p style="color: aquamarine;" class="mb-0 fw-bolder">አስዳስድፍ</p>
+            <p class="display-5 mt-0">
+                Eripllkljasd Asdg Asdg Ask Asd
+            </p>
+        </div>
+        <div class="text-white d-flex justify-content-evenly mb-5 flex-wrap ">
+            <div class="col-md-3">
+                <!-- <hr class="hr hr-blurry"> -->
+                <div style="background: linear-gradient(to right, rgb(51, 3, 95), red);" class="col-6 pt-2 mb-2"></div>
+                <h5>Title Title Title</h5>
+                <p class="text-light fw-lighter ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis neque vitae quod temporibus iure molestias. Voluptatum et alias quasi consequatur.</p>
+            </div>
+            <div class="col-md-3">
+                <!-- <hr class="hr hr-blurry"> -->
+                <div style="background: linear-gradient(to right, rgb(51, 3, 95), rgb(9, 199, 233));" class="col-3 pt-2 mb-2"></div>
+                <h5>Title Title Title</h5>
+                <p class="text-light fw-lighter ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis neque vitae quod temporibus iure molestias. Voluptatum et alias quasi consequatur.</p>
+            </div>
+            <div class="col-md-3">
+                <!-- <hr class="hr hr-blurry"> -->
+                <div style="background: linear-gradient(to right, rgb(51, 3, 95), rgb(152, 247, 29));" class="col-3 pt-2 mb-2"></div>
+                <h5>Title Title Title</h5>
+                <p class="text-light fw-lighter ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis neque vitae quod temporibus iure molestias. Voluptatum et alias quasi consequatur.</p>
+            </div>
+        </div>
+        <!-- <hr class="bg-white "> -->
+        <div style="height: 1px;" class="container-fluid  col-10 bg-light mb-3"></div>
+        <div class="text-white d-flex justify-content-evenly mb-3 mt-5 flex-wrap">
+            <div class="col-md-3 border-danger">
+                <!-- <hr class="hr hr-blurry"> -->
+                <div style="background: linear-gradient(to right, rgb(51, 3, 95), rgb(63, 88, 201));" class="col-3 pt-2 mb-2"></div>
+                <h5>Title Title Title</h5>
+                <p class="text-light fw-lighter ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis neque vitae quod temporibus iure molestias. Voluptatum et alias quasi consequatur.</p>
+            </div>
+            <div class="col-md-3 border-danger">
+                <!-- <hr class="hr hr-blurry"> -->
+                <div style="background: linear-gradient(to right, rgb(51, 3, 95), rgb(96, 49, 105));" class="col-3 pt-2 mb-2"></div>
+                <h5>Title Title Title</h5>
+                <p class="text-light fw-lighter ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis neque vitae quod temporibus iure molestias. Voluptatum et alias quasi consequatur.</p>
+            </div>
+            <div class="col-md-3 border-danger">
+                <!-- <hr class="hr hr-blurry"> -->
+                <div style="background: linear-gradient(to right, rgb(51, 3, 95), rgb(222, 29, 247));" class="col-3 pt-2 mb-2"></div>
+                <h5>Title Title Title</h5>
+                <p class="text-light fw-lighter ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis neque vitae quod temporibus iure molestias. Voluptatum et alias quasi consequatur.</p>
+            </div>
+        </div>
+    </div>
+    <!-- background image and lay over text -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+        let mybutton = document.getElementById("btn-back-to-top");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+        scrollFunction();
+        };
+
+        function scrollFunction() {
+        if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+        ) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.addEventListener("click", backToTop);
+
+        function backToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
